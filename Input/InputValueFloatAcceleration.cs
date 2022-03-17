@@ -8,7 +8,7 @@ namespace GameCreator.Runtime.Common
     [Category("Usage/Acceleration")]
 
     [Description("Get Acceleration from a Controller Trigger or axis input, like L2 and R2 in most modern controllers")]
-    [Image(typeof(IconRotation), ColorTheme.Type.Yellow)]
+    [Image(typeof(IconChevronUp), ColorTheme.Type.Purple)]
 
     [Keywords("Joystick", "Acceleration")]
 
