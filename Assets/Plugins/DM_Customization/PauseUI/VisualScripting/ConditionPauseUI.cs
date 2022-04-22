@@ -17,7 +17,7 @@ namespace DM_Customization
     [Serializable]
     public class ConditionPauseUI : Condition
     {
-        protected override string Summary => "Pause UI is Open";
+        protected override string Summary => $"is Pause UI Open";
         protected override bool Run(Args args)
         {
            

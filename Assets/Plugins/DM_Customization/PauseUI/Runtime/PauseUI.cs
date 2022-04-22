@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 using GameCreator.Runtime.Common;
-using GameCreator.Runtime.VisualScripting;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 namespace DM_Customization
 {
     [AddComponentMenu("Game Creator/UI/Pause UI")]

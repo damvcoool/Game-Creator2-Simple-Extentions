@@ -23,6 +23,8 @@ namespace DM_Customization
     [Serializable]
     public class InstructionPauseUI : Instruction
     {
+        public override string Title => $"{this.m_State} Pause UI";
+        
         public enum EnumState
         {
             Open,
