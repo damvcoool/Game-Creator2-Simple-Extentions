@@ -14,6 +14,7 @@
 /[Aa]ssets/[Pp]lugins/[Gg]ame[Cc]reator
 /[Aa]ssets/[Tt]esting[Dd]ata
 /[Aa]ssets/[Tt]ripolygon
+/[Aa]ssets/[Tt]extMesh [Pp]ro
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -78,3 +79,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Pp]lugins/[Gg]ame[Cc]reator.meta
 /[Aa]ssets/[Tt]esting[Dd]ata.meta
 /[Aa]ssets/[Tt]ripolygon.meta
+/[Aa]ssets/[Tt]extMesh Pro.meta
