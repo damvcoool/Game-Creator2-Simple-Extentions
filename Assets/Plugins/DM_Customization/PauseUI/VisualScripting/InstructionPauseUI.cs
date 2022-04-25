@@ -24,7 +24,7 @@ namespace DM_Customization
     public class InstructionPauseUI : Instruction
     {
         public override string Title => $"{this.m_State} Pause UI";
-        
+
         public enum EnumState
         {
             Open,
@@ -37,7 +37,7 @@ namespace DM_Customization
         protected override Task Run(Args args)
         {
             pauseUI = m_PauseUI.Get(args).Get<PauseUI>();
-            
+
 
             if (m_State == EnumState.Open)
             {
@@ -50,7 +50,7 @@ namespace DM_Customization
                 if (m_ClosingUI != null) m_ClosingUI.gameObject.SetActive(false);
             }
 
-            
+
 
             return DefaultResult;
         }
