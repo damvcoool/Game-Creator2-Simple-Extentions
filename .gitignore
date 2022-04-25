@@ -15,7 +15,6 @@
 /[Aa]ssets/[Tt]esting[Dd]ata
 /[Aa]ssets/[Tt]ripolygon
 /[Aa]ssets/[Tt]extMesh [Pp]ro
-!/[Uu]nity[Pp]ackages
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -65,7 +64,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.aab
-*.unitypackage
+//*.unitypackage
 *.app
 
 # Crashlytics generated file
