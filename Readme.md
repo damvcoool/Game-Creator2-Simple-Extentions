@@ -21,3 +21,9 @@ To take advantage of the code and samples on this repository you will to have th
 ### Additional Requirements
 Some of the examples will also require some custom Actions, Conditions and Triggers that can be downloaded from the [Game Creator Hub](https://gamecreator.io/hub)
 I will try to list the ones I use the most here as I come up with them.
+
+## Custom Micro Modules
+
+### PauseUI
+With this Micro Module, it can be easier to implement a Pause Screen for your game.
+[Video](https://youtu.be/_E91aJAcsC8)
