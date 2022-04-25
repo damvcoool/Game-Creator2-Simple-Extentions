@@ -26,4 +26,7 @@ I will try to list the ones I use the most here as I come up with them.
 
 ### PauseUI
 With this Micro Module, it can be easier to implement a Pause Screen for your game.
-[Video](https://youtu.be/_E91aJAcsC8)
+
+[Download PauseUI MicroModule](https://github.com/damvcoool/GameCreator2Samples/blob/main/UnityPackages/PauseUI_MicroModule-v0.1.5.unitypackage?raw=true)
+
+[Explanation Video](https://youtu.be/_E91aJAcsC8)
