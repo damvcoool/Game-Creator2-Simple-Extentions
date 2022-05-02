@@ -1,12 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using System.Collections;
 using UnityEngine;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.Variables;
 using GameCreator.Runtime.Common.UnityUI;
 using UnityEngine.UI;
-using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -27,12 +25,12 @@ namespace DM_Customization
         }
 #endif
         // EXPOSED MEMBERS: -----------------------------------------------------------------------
-        [SerializeField] private CollectorListVariable m_DialogueText = new CollectorListVariable();
-        [SerializeField] private PropertyGetDecimal m_IntervalTime = GetDecimalDecimal.Create(3f);
+        [SerializeField] private CollectorListVariable m_DialogueText;
+        [SerializeField] private PropertyGetDecimal m_IntervalTime;
         [SerializeField] private GameObject m_Container;
-        [SerializeField] private TextReference m_Text = new TextReference();
-        [SerializeField] private TextReference m_CurrentSpeaker = new TextReference();
-        [SerializeField] private PropertyGetBool m_UseBillboard = new PropertyGetBool(true);
+        [SerializeField] private TextReference m_Text;
+        [SerializeField] private TextReference m_CurrentSpeaker;
+        [SerializeField] private PropertyGetBool m_UseBillboard;
         [SerializeField] private TimeMode m_UpdateTime;
 
         // MEMBERS: -----------------------------------------------------------------------

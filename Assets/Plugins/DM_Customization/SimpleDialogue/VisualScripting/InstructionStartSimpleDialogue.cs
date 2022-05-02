@@ -24,7 +24,7 @@ namespace DM_Customization
     public class InstructionStartSimpleDialogue : Instruction
     {
         [SerializeField] private PropertyGetGameObject m_Character = GetGameObjectTransform.Create();
-        [SerializeField] private SimpleDialogueUI m_DisplayMe = new SimpleDialogueUI();
+        [SerializeField] private SimpleDialogueUI m_DisplayMe;
         
         
         protected override Task Run(Args args)

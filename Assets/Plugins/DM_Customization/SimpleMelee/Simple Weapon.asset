@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44aafa0d7059e0f40bfc89d064b999c9, type: 3}
+  m_Name: Simple Weapon
+  m_EditorClassIdentifier: 
+  m_WeaponPrefab:
+    m_Property:
+      rid: 6182348967583154180
+  m_AttackPower:
+    m_Property:
+      rid: 6182348967583154181
+  m_AnimationClip: {fileID: 7400000, guid: 4e0aa5d2e214f384191211df2b2fb8bd, type: 2}
+  m_AvatarMask: {fileID: 0}
+  m_UseRootMotion: 0
+  m_Bone:
+    m_IsExpanded: 1
+    m_Breakpoint: 0
+    m_IsEnabled: 1
+    m_Type: 1
+    m_Human: 18
+    m_Path: 
+  m_Position: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6182348967583154180
+      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_GameObject: {fileID: 199005754119316208, guid: b0648a6a2c743354295913531c7c58a6, type: 3}
+    - rid: 6182348967583154181
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 5
