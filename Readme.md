@@ -17,6 +17,7 @@ To take advantage of the code and samples on this repository you will to have th
 - Input System
 - Animation Rigging
 - Burst (depency of Animation Rigging)
+- All the Examples from GC2, Stats2, and Inventory
 
 ### Additional Requirements
 Some of the examples will also require some custom Actions, Conditions and Triggers that can be downloaded from the [Game Creator Hub](https://gamecreator.io/hub)
@@ -24,9 +25,15 @@ I will try to list the ones I use the most here as I come up with them.
 
 ## Custom Micro Modules
 
-### PauseUI
+### PauseUI MicroModule
 With this Micro Module, it can be easier to implement a Pause Screen for your game.
 
 [Download PauseUI MicroModule](https://github.com/damvcoool/GameCreator2Samples/blob/main/UnityPackages/PauseUI_MicroModule-v0.1.5.unitypackage?raw=true)
 
 [Explanation Video](https://youtu.be/_E91aJAcsC8)
+
+### Simple Melee MicroModule
+With this Module it should be a bit easier to implement some basic Melee for your game.
+
+[Download Simple Melee MicroModule](https://github.com/damvcoool/GameCreator2Samples/tree/main/UnityPackages/SimpleMelee_MicroModule-v0.0.8.unitypackage?raw=true)
+NOTE: it's not meant to be full featured.
