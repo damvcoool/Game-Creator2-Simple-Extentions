@@ -281,21 +281,21 @@ MonoBehaviour:
       m_Calls: []
   m_Instructions:
     m_Instructions:
-    - rid: 6182348774133727350
+    - rid: 3620966746316603476
   references:
     version: 2
     RefIds:
-    - rid: 6182348774133727350
-      type: {class: InstructionPauseUI, ns: DM_Customization, asm: Assembly-CSharp-firstpass}
+    - rid: 3620966746316603476
+      type: {class: InstructionPauseUI, ns: DM_Customization.Runtime, asm: Assembly-CSharp-firstpass}
       data:
         m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_PauseUI:
           m_Property:
-            rid: 6182348774133727352
+            rid: 3620966746316603479
         m_State: 1
-    - rid: 6182348774133727352
+    - rid: 3620966746316603479
       type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
 --- !u!1 &4159908085827926967
 GameObject:
@@ -561,6 +561,10 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3620966746316603481
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
     - rid: 6182348774133727281
       type: {class: InstructionAppQuit, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -577,8 +581,6 @@ MonoBehaviour:
           m_Property:
             rid: 6182348774133727354
         m_State: 1
-    - rid: 6182348774133727354
-      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
 --- !u!1 &5046482024723916166
 GameObject:
   m_ObjectHideFlags: 0

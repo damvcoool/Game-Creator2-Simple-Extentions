@@ -7681,11 +7681,11 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Character:
           m_Property:
-            rid: 3620966735782084670
-    - rid: 3620966735782084670
-      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+            rid: 3620966746316603455
     - rid: 3620966738320687106
       type: {class: InputButtonAttackWest, ns: DM_Customization, asm: Assembly-CSharp-firstpass}
+    - rid: 3620966746316603455
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
 --- !u!1 &1237988283
 GameObject:
   m_ObjectHideFlags: 0
