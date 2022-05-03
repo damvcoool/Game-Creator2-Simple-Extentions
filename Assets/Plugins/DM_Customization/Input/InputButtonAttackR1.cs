@@ -4,10 +4,10 @@ using GameCreator.Runtime.Common;
 
 namespace DM_Customization
 {
-    [Title("Attack")]
-    [Category("Usage/Attack")]
+    [Title("Attack R1")]
+    [Category("Usage/Attack R1")]
     
-    [Description("Cross-device support for the 'Attack' input: Left Mouse Click or and the pressing L1 on most Gamepads")]
+    [Description("Cross-device support for the 'Attack' input: Left Mouse Click or and the pressing R1 on most Gamepads")]
     [Image(typeof(IconSkull), ColorTheme.Type.Purple)]
 
     [Serializable]

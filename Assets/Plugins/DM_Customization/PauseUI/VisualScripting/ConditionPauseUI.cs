@@ -1,7 +1,7 @@
 ﻿using System;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.VisualScripting;
-namespace DM_Customization
+namespace DM_Customization.Runtime
 {
     [Version(1, 0, 0)]
 

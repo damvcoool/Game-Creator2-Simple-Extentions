@@ -4,7 +4,7 @@ using GameCreator.Runtime.Common;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-namespace DM_Customization
+namespace DM_Customization.Runtime
 {
     [AddComponentMenu("Game Creator/UI/Pause UI")]
     [Icon(DMPaths.DMPATH + "PauseUI/Editor/GizmoPause.png")]

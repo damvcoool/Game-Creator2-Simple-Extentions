@@ -9,10 +9,10 @@ namespace DM_Customization.Runtime
 {
     [CreateAssetMenu(
         fileName = "Simple Weapon",
-        menuName = "Custom/Simple Weapon"
+        menuName = "Game Creator/Custom/Simple Weapon"
     )]
 
-    [Icon("")]
+    [Icon(DMPaths.DMPATH + "SimpleMelee/Editor/SwordGizmo.png")]
 
     [Serializable]
     public class SimpleWeapon : ScriptableObject

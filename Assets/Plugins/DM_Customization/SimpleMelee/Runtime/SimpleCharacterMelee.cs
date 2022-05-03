@@ -1,10 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using GameCreator.Runtime.Characters;
 
 namespace DM_Customization.Runtime
 {
+    [AddComponentMenu("Game Creator/Custom/Simple Character Melee")]
+
+    [Icon(DMPaths.DMPATH + "SimpleMelee/Editor/MeleeGizmo.png")]
+
     public class SimpleCharacterMelee : MonoBehaviour
     {
         [SerializeField] SimpleWeapon m_Weapon;

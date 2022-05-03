@@ -5,7 +5,7 @@ using GameCreator.Runtime.Common;
 using UnityEngine.UI;
 using GameCreator.Runtime.VisualScripting;
 
-namespace DM_Customization
+namespace DM_Customization.Runtime
 {
     [Version(1, 0, 0)]
 
