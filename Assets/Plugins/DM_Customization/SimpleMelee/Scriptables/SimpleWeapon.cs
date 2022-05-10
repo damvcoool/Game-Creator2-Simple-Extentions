@@ -20,7 +20,6 @@ namespace DM_Customization.Runtime
         // EXPOSED MEMBERS: -----------------------------------------------------------------------
 
         [SerializeField] private PropertyGetGameObject m_WeaponPrefab = GetGameObjectInstance.Create();
-        [SerializeField] private PropertyGetDecimal m_AttackPower = new PropertyGetDecimal(5);
         [SerializeField] private AnimationClip m_AnimationClip;
         [SerializeField] private AvatarMask m_AvatarMask;
         [SerializeField] private bool m_UseRootMotion;
@@ -32,7 +31,7 @@ namespace DM_Customization.Runtime
         // PROPERTIES: ----------------------------------------------------------------------------
 
         public GameObject WeaponPrefab => this.m_WeaponPrefab.Get(m_Args);
-        public float AttackPower => (float)this.m_AttackPower.Get(m_Args);
+        public bool isAttacking = false;
         public AnimationClip AnimationClip => this.m_AnimationClip;
         public Bone Bone => this.m_Bone;
         public Vector3 LocationOffset => this.m_Position;
@@ -43,13 +42,13 @@ namespace DM_Customization.Runtime
             Collider collider = weapon.GetComponent<Collider>();
             float time = m_AnimationClip.length;
             collider.enabled = true;
-
+            isAttacking = true;
             ConfigGesture configuration = new ConfigGesture(0, this.m_AnimationClip.length / 1, 1, this.m_UseRootMotion, 0.1f, 0.1f);
 
-            Task gestureTask = character.Gestures.CrossFade(this.m_AnimationClip, this.m_AvatarMask, BlendMode.Blend, configuration, false);
+            Task gestureTask = character.Gestures.CrossFade(this.m_AnimationClip, this.m_AvatarMask, BlendMode.Blend, configuration, true);
 
             await gestureTask;
-
+            isAttacking = false;
             collider.enabled = false;
         }
         public GameObject Equip(Character character)

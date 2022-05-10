@@ -1,5 +1,6 @@
 using UnityEngine;
 using GameCreator.Runtime.Characters;
+using System.Threading.Tasks;
 
 namespace DM_Customization.Runtime
 {
@@ -20,7 +21,9 @@ namespace DM_Customization.Runtime
 
         public void CharacterAttack()
         {
-            m_Weapon.Attack(this.m_Character, p_Weapon);
+            if(!m_Weapon.isAttacking)
+                m_Weapon.Attack(this.m_Character, p_Weapon);
+
         }
     }
 }
