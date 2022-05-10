@@ -23,7 +23,10 @@ namespace DM_Customization.Runtime
         {
             if(!m_Weapon.isAttacking)
                 m_Weapon.Attack(this.m_Character, p_Weapon);
-
+        }
+        public bool IsAttacking()
+        {
+            return m_Weapon.isAttacking;
         }
     }
 }
