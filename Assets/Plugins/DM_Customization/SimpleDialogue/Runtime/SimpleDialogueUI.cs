@@ -81,7 +81,7 @@ namespace DM_Customization
                 m_CurrentSpeaker.Text = currentSpeaker;
 
 
-            m_Text.Text = m_DialogueText.Get()[0].ToString();
+            m_Text.Text = m_DialogueText.Get[0].ToString();
             OnContinue();
         }
 
@@ -112,9 +112,9 @@ namespace DM_Customization
         {
             float duration = (float)m_IntervalTime.Get(m_Args);
 
-            for (int i = 0; i < m_DialogueText.Get().Count; i++)
+            for (int i = 0; i < m_DialogueText.Get.Count; i++)
             {
-                m_Text.Text = m_DialogueText.Get()[i].ToString();
+                m_Text.Text = m_DialogueText.Get[i].ToString();
                 await this.Time(duration, m_UpdateTime);
             }
             
