@@ -4466,12 +4466,12 @@ MonoBehaviour:
     - rid: 6182348943916007429
   m_InBackground: 1
   m_TriggerEvent:
-    rid: 6182348943916007424
+    rid: -2
   references:
     version: 2
     RefIds:
-    - rid: 6182348943916007424
-      type: {class: EventOnStart, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 6182348943916007429
       type: {class: InstructionDisplayGameVersion, ns: GameCreator.Runtime.VisualScripting, asm: Assembly-CSharp}
       data:
@@ -5477,6 +5477,103 @@ Transform:
   m_Father: {fileID: 1413289551}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &777694627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777694631}
+  - component: {fileID: 777694630}
+  - component: {fileID: 777694629}
+  - component: {fileID: 777694628}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &777694628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777694627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &777694629
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777694627}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &777694630
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777694627}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &777694631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777694627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.550117, y: 39.99899, z: 6.5937777}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788561089
 GameObject:
   m_ObjectHideFlags: 0
@@ -6419,6 +6516,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 6182348774133727340
       type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -6590,6 +6689,8 @@ MonoBehaviour:
         m_SkinWidth: 0.08
         m_PushForce: 1
         m_MaxSlope: 45
+        m_StepHeight: 0.3
+        m_Plane: 0
     - rid: 6182348810289938470
       type: {class: UnitFacingPivot, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -10433,6 +10534,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 110060781}
     m_Modifications:
+    - target: {fileID: 7376401914483420625, guid: b79b8d5bb78a607488ec081fe89acbc6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 0fa6b1c8ea0215d4bb62644c942db2fe, type: 2}
     - target: {fileID: 8394871458967689236, guid: b79b8d5bb78a607488ec081fe89acbc6, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -11399,6 +11504,8 @@ MonoBehaviour:
         m_AvoidQuality: 4
         m_AvoidPriority: 50
         m_AutoMeshLink: 1
+        m_AgentType:
+          m_AgentTypeIndex: 0
 --- !u!4 &1730682976
 Transform:
   m_ObjectHideFlags: 0
@@ -11961,15 +12068,15 @@ MonoBehaviour:
     m_UpdateTime: 0
   m_Kernel:
     m_Player:
-      rid: 2254388531259506724
+      rid: 3620966981187403784
     m_Motion:
-      rid: 6182348727560437788
+      rid: 3620966981187403779
     m_Driver:
-      rid: 6182348727560437789
+      rid: 3620966981187403781
     m_Facing:
-      rid: 6182348727560437790
+      rid: 3620966981187403782
     m_Animim:
-      rid: 6182348727560437791
+      rid: 3620966981187403783
   m_InverseKinematics:
     m_RigLayers:
       m_Rigs:
@@ -11993,33 +12100,14 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2254388531259506724
-      type: {class: UnitPlayerDirectionalAlternative, ns: DM_Customization, asm: Assembly-CSharp-firstpass}
-      data:
-        m_IsControllable: 1
-        m_InputMove:
-          m_Input:
-            rid: 2254388531259506725
-        m_InputJump:
-          m_Input:
-            rid: 2254388531259506726
-        m_InputInteract:
-          m_Input:
-            rid: 2254388531259506727
-    - rid: 2254388531259506725
-      type: {class: InputValueVector2MotionPrimary, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-    - rid: 2254388531259506726
-      type: {class: InputButtonJump, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-    - rid: 2254388531259506727
-      type: {class: InputButtonInteract, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-    - rid: 6182348727560437788
+    - rid: 3620966981187403779
       type: {class: UnitMotionController, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
         m_Interaction:
           m_Radius: 2
           m_Mode:
             m_InteractionMode:
-              rid: 6182348727560437798
+              rid: 3620966981187403780
         m_Speed: 4
         m_Rotation: 1800
         m_Mass: 80
@@ -12036,31 +12124,56 @@ MonoBehaviour:
           m_AirJumps: 0
           m_JumpForce: 5
           m_JumpCooldown: 0.5
-    - rid: 6182348727560437789
+    - rid: 3620966981187403780
+      type: {class: InteractionModeNearCharacter, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data:
+        m_Offset: {x: 0, y: 0, z: 1}
+    - rid: 3620966981187403781
       type: {class: UnitDriverController, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
         m_SkinWidth: 0.08
         m_PushForce: 1
         m_MaxSlope: 45
-    - rid: 6182348727560437790
+        m_StepHeight: 0.3
+        m_Plane: 0
+    - rid: 3620966981187403782
       type: {class: UnitFacingPivot, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
         m_UpdateRotation: 1
-    - rid: 6182348727560437791
+    - rid: 3620966981187403783
       type: {class: UnitAnimimKinematic, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
         m_ModelPosition: 0
         m_SmoothTime: 0.5
-        m_Mannequin: {fileID: 348613629}
-        m_Animator: {fileID: 1303707179}
+        m_Mannequin: {fileID: 0}
+        m_Animator: {fileID: 0}
         m_StartState: {fileID: 0}
         m_BoneRack:
-          m_Skeleton: {fileID: 11400000, guid: 5809449d43408435db32108bd69aa82c, type: 2}
+          m_Skeleton: {fileID: 0}
         m_Breathing:
           m_Exertion: 0.1
           m_Rate: 0.25
         m_Twitching:
           m_Weight: 0.5
+    - rid: 3620966981187403784
+      type: {class: UnitPlayerDirectionalAlternative, ns: DM_Customization, asm: Assembly-CSharp-firstpass}
+      data:
+        m_IsControllable: 1
+        m_InputMove:
+          m_Input:
+            rid: 3620966981187403785
+        m_InputJump:
+          m_Input:
+            rid: 3620966981187403786
+        m_InputInteract:
+          m_Input:
+            rid: 3620966981187403787
+    - rid: 3620966981187403785
+      type: {class: InputValueVector2MotionPrimary, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 3620966981187403786
+      type: {class: InputButtonJump, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 3620966981187403787
+      type: {class: InputButtonInteract, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
     - rid: 6182348727560437792
       type: {class: RigLookTrack, ns: GameCreator.Runtime.Characters.IK, asm: GameCreator.Runtime.Core}
       data:
@@ -12117,10 +12230,6 @@ MonoBehaviour:
         m_Type: 1
         m_Human: 6
         m_Path: 
-    - rid: 6182348727560437798
-      type: {class: InteractionModeNearCharacter, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
-      data:
-        m_Offset: {x: 0, y: 0, z: 1}
 --- !u!4 &1849604090
 Transform:
   m_ObjectHideFlags: 0
@@ -12129,7 +12238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849604088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.090096, y: 30.60244, z: -35.878586}
+  m_LocalPosition: {x: 51.328438, y: 40.99899, z: 0.2778349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
