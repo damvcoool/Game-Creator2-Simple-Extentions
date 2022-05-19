@@ -3809,6 +3809,8 @@ MonoBehaviour:
         m_SkinWidth: 0.08
         m_PushForce: 1
         m_MaxSlope: 45
+        m_StepHeight: 0.3
+        m_Plane: 0
     - rid: 3620966735782084622
       type: {class: UnitFacingPivot, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -4393,6 +4395,8 @@ MonoBehaviour:
         m_SkinWidth: 0.08
         m_PushForce: 1
         m_MaxSlope: 45
+        m_StepHeight: 0.3
+        m_Plane: 0
     - rid: 3620966735782084634
       type: {class: UnitFacingPivot, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -6953,6 +6957,95 @@ Transform:
   m_Father: {fileID: 689070268}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1055308040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055308043}
+  - component: {fileID: 1055308042}
+  - component: {fileID: 1055308041}
+  m_Layer: 0
+  m_Name: ChangeWeapon_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1055308041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055308040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 6334596980938637338
+  m_InBackground: 1
+  m_TriggerEvent:
+    rid: 6334596980938637336
+  references:
+    version: 2
+    RefIds:
+    - rid: 6334596980938637336
+      type: {class: EventTriggerEnter, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Collider:
+          m_Option: 1
+          m_GameObject:
+            m_Property:
+              rid: 6334596980938637337
+    - rid: 6334596980938637337
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 6334596980938637338
+      type: {class: InstructionSimpleMeleeEquip, ns: DM_Customization.Runtime, asm: Assembly-CSharp-firstpass}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6334596980938637339
+        m_MeleeWeapon: {fileID: 11400000, guid: cfb28da24082756428b1a0944b5b0625, type: 2}
+    - rid: 6334596980938637339
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+--- !u!65 &1055308042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055308040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1055308043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055308040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.805099, y: 1.47, z: 0.079}
+  m_LocalScale: {x: 1, y: 3, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1060743700
 GameObject:
   m_ObjectHideFlags: 0
@@ -8189,7 +8282,7 @@ MonoBehaviour:
     m_SmoothTimePosition: 0.1
     m_SmoothTimeRotation: 0.1
   m_AvoidClip:
-    m_Enabled: 0
+    m_Enabled: 1
     m_LayerMask:
       serializedVersion: 2
       m_Bits: 4294967295
@@ -10293,6 +10386,118 @@ Transform:
   m_Father: {fileID: 1435744970}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1721301325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721301328}
+  - component: {fileID: 1721301327}
+  - component: {fileID: 1721301326}
+  m_Layer: 0
+  m_Name: ChangeWeapon_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1721301326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721301325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecd922218e245e2b85d51f9f08338c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Instructions:
+    m_Instructions:
+    - rid: 6334596980938637355
+    - rid: 6334596980938637338
+  m_InBackground: 1
+  m_TriggerEvent:
+    rid: 6334596980938637336
+  references:
+    version: 2
+    RefIds:
+    - rid: 6334596980938637336
+      type: {class: EventTriggerEnter, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_Collider:
+          m_Option: 1
+          m_GameObject:
+            m_Property:
+              rid: 6334596980938637337
+    - rid: 6334596980938637337
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 6334596980938637338
+      type: {class: InstructionSimpleMeleeEquip, ns: DM_Customization.Runtime, asm: Assembly-CSharp-firstpass}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Character:
+          m_Property:
+            rid: 6334596980938637339
+        m_MeleeWeapon: {fileID: 11400000, guid: 314dc085898737740b0eebc1186e6e02, type: 2}
+    - rid: 6334596980938637339
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+    - rid: 6334596980938637355
+      type: {class: InstructionLogicCheckConditions, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Conditions:
+          m_Conditions:
+          - rid: 6334596980938637356
+    - rid: 6334596980938637356
+      type: {class: ConditionSimpleMeleeCompareWeapon, ns: DM_Customization.Runtime, asm: Assembly-CSharp-firstpass}
+      data:
+        m_IsExpanded: 1
+        m_Breakpoint: 0
+        m_IsEnabled: 1
+        m_Sign: 0
+        m_Character:
+          m_Property:
+            rid: 6334596980938637357
+        m_MeleeWeapon: {fileID: 11400000, guid: 314dc085898737740b0eebc1186e6e02, type: 2}
+    - rid: 6334596980938637357
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+--- !u!65 &1721301327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721301325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1721301328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721301325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.805099, y: 1.47, z: 5.185}
+  m_LocalScale: {x: 1, y: 3, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731242901
 GameObject:
   m_ObjectHideFlags: 0
@@ -11314,6 +11519,8 @@ MonoBehaviour:
         m_SkinWidth: 0.08
         m_PushForce: 1
         m_MaxSlope: 45
+        m_StepHeight: 0.3
+        m_Plane: 0
     - rid: 3620966735782084634
       type: {class: UnitFacingPivot, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:

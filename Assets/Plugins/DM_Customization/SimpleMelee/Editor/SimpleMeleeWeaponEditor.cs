@@ -6,10 +6,10 @@ using UnityEngine.UIElements;
 
 namespace DM_Customization.Editor
 {
-    [CustomEditor(typeof(SimpleWeapon))]
-    public class SimpleWeaponEditor : UnityEditor.Editor
+    [CustomEditor(typeof(SimpleMeleeWeapon))]
+    public class SimpleMeleeWeaponEditor : UnityEditor.Editor
     {
-        public static SimpleWeapon DEFAULT_INSTANCE;
+        public static SimpleMeleeWeapon DEFAULT_INSTANCE;
 
         // MEMBERS: -------------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ namespace DM_Customization.Editor
 
         public override VisualElement CreateInspectorGUI()
         {
-            DEFAULT_INSTANCE = this.target as SimpleWeapon;
+            DEFAULT_INSTANCE = this.target as SimpleMeleeWeapon;
             this.m_Root = new VisualElement();
             this.m_Transform = new VisualElement();
             this.m_WeaponData = new VisualElement();
@@ -74,11 +74,11 @@ namespace DM_Customization.Editor
         [InitializeOnLoadMethod]
         private static void InitOnLoad()
         {
-            string[] guids = AssetDatabase.FindAssets($"t:{nameof(SimpleWeapon)}");
+            string[] guids = AssetDatabase.FindAssets($"t:{nameof(SimpleMeleeWeapon)}");
             if (guids.Length == 0) return;
 
             string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-            SimpleWeapon currency = AssetDatabase.LoadAssetAtPath<SimpleWeapon>(path);
+            SimpleMeleeWeapon currency = AssetDatabase.LoadAssetAtPath<SimpleMeleeWeapon>(path);
             if (currency != null) DEFAULT_INSTANCE = currency;
         }
     }

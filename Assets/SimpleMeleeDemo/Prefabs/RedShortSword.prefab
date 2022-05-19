@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6956784361905882007}
   - component: {fileID: 5182797416911369040}
   m_Layer: 0
-  m_Name: ShortSword
+  m_Name: RedShortSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5106b40878ad643198b14f0cf47b5cf6, type: 2}
+  - {fileID: 2100000, guid: b0e392662097242f2aa1c239a664e43f, type: 2}
   - {fileID: 2100000, guid: bfcb75cbc50784ab0a61a4666889aa9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

@@ -13,7 +13,7 @@ namespace DM_Customization.Runtime
     [Title("Simple Attack with Stamina")]
     [Description("Initiates attack with currently equipped weapon")]
 
-    [Category("Simple Melee/Simple Attac kwith Stamina")]
+    [Category("Simple Melee/Simple Attack with Stamina")]
 
     [Parameter("Character", "The Character that will initiate the attack")]
     [Parameter("Stamina", "The Attribute type that changes its value")]
@@ -43,7 +43,7 @@ namespace DM_Customization.Runtime
             RuntimeAttributeData attribute = traits.RuntimeAttributes.Get(this.m_Stamina.ID);
             if (attribute == null) return DefaultResult;
 
-            SimpleCharacterMelee weapon = gameObject.GetComponent<SimpleCharacterMelee>();
+            SimpleMeleeCharacter weapon = gameObject.GetComponent<SimpleMeleeCharacter>();
             if (weapon == null) return DefaultResult;
 
             if (!weapon.IsAttacking())

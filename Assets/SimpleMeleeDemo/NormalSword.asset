@@ -9,18 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44aafa0d7059e0f40bfc89d064b999c9, type: 3}
-  m_Name: Simple Weapon
+  m_Script: {fileID: 11500000, guid: 2afc425b1001ab448824c04b9e9dcb66, type: 3}
+  m_Name: NormalSword
   m_EditorClassIdentifier: 
   m_WeaponPrefab:
     m_Property:
-      rid: 6182348967583154180
-  m_AttackPower:
-    m_Property:
-      rid: 6182348967583154181
+      rid: 6334596958172479501
   m_AnimationClip: {fileID: 7400000, guid: cc419bb777f54db4a9dfdec3ba990054, type: 2}
-  m_AvatarMask: {fileID: 0}
-  m_UseRootMotion: 1
+  m_AvatarMask: {fileID: 31900000, guid: 11671dd559385084a961a29879486476, type: 2}
+  m_UseRootMotion: 0
   m_Bone:
     m_IsExpanded: 1
     m_Breakpoint: 0
@@ -28,16 +25,13 @@ MonoBehaviour:
     m_Type: 1
     m_Human: 18
     m_Path: 
-  m_Position: {x: -0.001, y: 0.088, z: 0.019}
-  m_Rotation: {x: -0.796, y: 93.665, z: 94.419}
+  m_Position: {x: -0.01, y: 0.096, z: 0.015}
+  m_Rotation: {x: 0, y: 0, z: 96.02}
+  isAttacking: 0
   references:
     version: 2
     RefIds:
-    - rid: 6182348967583154180
+    - rid: 6334596958172479501
       type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_GameObject: {fileID: 1223751530954168061, guid: d641215e8951073478d830a32480a1bf, type: 3}
-    - rid: 6182348967583154181
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 5

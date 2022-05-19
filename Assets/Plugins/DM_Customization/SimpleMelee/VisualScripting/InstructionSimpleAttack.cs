@@ -29,7 +29,7 @@ namespace DM_Customization.Runtime
         {
             GameObject gameObject = this.m_Character.Get(args);
 
-            SimpleCharacterMelee weapon = gameObject.GetComponent<SimpleCharacterMelee>();
+            SimpleMeleeCharacter weapon = gameObject.GetComponent<SimpleMeleeCharacter>();
 
             weapon.CharacterAttack();
 

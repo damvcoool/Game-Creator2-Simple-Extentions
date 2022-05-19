@@ -8,8 +8,8 @@ using DM_Customization.Runtime;
 
 namespace DM_Customization.Editor
 {
-    [CustomEditor(typeof(SimpleCharacterMelee))]
-    public class SimpleCharacterMeleeEditor : UnityEditor.Editor
+    [CustomEditor(typeof(SimpleMeleeCharacter))]
+    public class SimpleMeleeCharacterEditor : UnityEditor.Editor
     {
         // MEMBERS: -------------------------------------------------------------------------------
         private VisualElement m_Root;
