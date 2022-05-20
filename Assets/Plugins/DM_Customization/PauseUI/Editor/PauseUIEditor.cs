@@ -4,9 +4,9 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-using DM_Customization.Runtime;
+using DM_Customization.Runtime.Pause;
 
-namespace DM_Customization.Editor
+namespace DM_Customization.Editor.Pause
 {
     [CustomEditor(typeof(PauseUI))]
     public class PauseUIEditor : UnityEditor.Editor

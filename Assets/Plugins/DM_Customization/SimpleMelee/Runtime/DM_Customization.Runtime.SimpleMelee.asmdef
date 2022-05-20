@@ -1,0 +1,18 @@
+{
+    "name": "DM_Customization.Runtime.SimpleMelee",
+    "rootNamespace": "DM_Customization.Runtime.SimpleMelee",
+    "references": [
+        "GUID:406c89e0bc84d48f4b079c3c4cd13320",
+        "GUID:678e48baf77684d4e9344465cde6f312",
+        "GUID:291e0c3f8e44e4ecf87c826d88458542"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

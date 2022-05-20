@@ -1,0 +1,17 @@
+{
+    "name": "DM_Customization.Editor.SimpleMelee",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fa216a02d195f46dfac1c6346fe5a4ee",
+        "GUID:9cb55196c596d0a45874e4fb084418e3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

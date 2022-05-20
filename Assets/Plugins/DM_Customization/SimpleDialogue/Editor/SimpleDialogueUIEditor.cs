@@ -5,10 +5,11 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using DM_Customization.Runtime.SimpleDialogue;
 using TMPro;
 using Image = UnityEngine.UI.Image;
 
-namespace DM_Customization.Editor
+namespace DM_Customization.Editor.SimpleDialogue
 {
     [CustomEditor(typeof(SimpleDialogueUI))]
     public class SimpleDialogueUIEditor : UnityEditor.Editor

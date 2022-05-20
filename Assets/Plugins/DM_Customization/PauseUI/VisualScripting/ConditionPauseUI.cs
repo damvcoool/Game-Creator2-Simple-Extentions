@@ -1,7 +1,8 @@
 ﻿using System;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.VisualScripting;
-namespace DM_Customization.Runtime
+
+namespace DM_Customization.Runtime.Pause
 {
     [Version(1, 0, 0)]
 

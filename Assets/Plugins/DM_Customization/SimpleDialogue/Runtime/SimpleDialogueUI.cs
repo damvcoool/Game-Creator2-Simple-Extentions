@@ -5,10 +5,11 @@ using GameCreator.Runtime.Common;
 using GameCreator.Runtime.Variables;
 using GameCreator.Runtime.Common.UnityUI;
 using UnityEngine.UI;
+using DM_Customization.Runtime.Common;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-namespace DM_Customization
+namespace DM_Customization.Runtime.SimpleDialogue
 {
     [AddComponentMenu("Game Creator/UI/Simple Dialogue UI")]
     [Icon(DMPaths.DMPATH + "SimpleDialogue/Editor/GizmoSimpleDialogue.png")]

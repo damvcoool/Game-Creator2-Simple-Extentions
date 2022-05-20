@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.VisualScripting;
 
-namespace DM_Customization
+namespace DM_Customization.Runtime.SimpleDialogue
 {
     [Version(1, 0, 0)]
 

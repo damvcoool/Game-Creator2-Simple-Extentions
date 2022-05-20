@@ -1,12 +1,9 @@
-using GameCreator.Editor.Common.UnityUI;
 using UnityEditor;
 using UnityEditor.UIElements;
-using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.UIElements;
-using DM_Customization.Runtime;
+using DM_Customization.Runtime.SimpleMelee;
 
-namespace DM_Customization.Editor
+namespace DM_Customization.Editor.SimpleMelee
 {
     [CustomEditor(typeof(SimpleMeleeCharacter))]
     public class SimpleMeleeCharacterEditor : UnityEditor.Editor

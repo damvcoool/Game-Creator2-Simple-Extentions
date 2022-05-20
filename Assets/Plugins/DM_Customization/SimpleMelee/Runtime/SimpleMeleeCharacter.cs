@@ -1,8 +1,9 @@
 using UnityEngine;
 using GameCreator.Runtime.Characters;
 using System.Threading.Tasks;
+using DM_Customization.Runtime.Common;
 
-namespace DM_Customization.Runtime
+namespace DM_Customization.Runtime.SimpleMelee
 {
     [AddComponentMenu("Game Creator/Custom/Simple Character Melee")]
 
