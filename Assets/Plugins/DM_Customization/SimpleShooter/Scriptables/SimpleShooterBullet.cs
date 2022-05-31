@@ -2,19 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="Simple Bullet", menuName ="Game Creator/Simple Shooter/Simple Bullet")]
-public class SimpleShooterBullet : ScriptableObject
+
+namespace DM_Customization.Runtime.SimpleShooter
 {
-    public static SimpleShooterBullet instance;
-
-    [SerializeField] private GameObject m_BulletPrefab;
-    [SerializeField] private float m_ReloadSpeed;
-    [SerializeField] private float m_ShootSpeed;
-
-    private void Awake()
+    [CreateAssetMenu(fileName = "Simple Bullet", menuName = "Game Creator/Simple Shooter/Simple Bullet")]
+    [RequireComponent(typeof(Collider))]
+    public class SimpleShooterBullet : MonoBehaviour
     {
-        if (!m_BulletPrefab)
-            Debug.LogWarning("No bullet options here");
+        [SerializeField] private float m_ShootSpeed;
+        private Rigidbody rb;
+
+        private void Awake()
+        {
+            if (!GetComponent<Rigidbody>())
+                gameObject.AddComponent<SimpleShooterBullet>();
+
+            rb = GetComponent<Rigidbody>();
+            rb.isKinematic = true;
+            
+        }
+        private void Start()
+        {
+
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            
+        }
 
     }
 }
