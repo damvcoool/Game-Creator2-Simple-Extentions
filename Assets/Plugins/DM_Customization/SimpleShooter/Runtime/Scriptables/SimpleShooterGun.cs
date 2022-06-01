@@ -9,12 +9,15 @@ namespace DM_Customization.Runtime.SimpleShooter
     {
         [SerializeField] private SimpleGunElements m_GunPrefab;
         [SerializeField] private Vector3 m_Position;
-        [SerializeField] private Quaternion m_Rotation;
+        [SerializeField] private Vector3 m_Rotation;
         [SerializeField] private Bone m_Hand = new Bone(HumanBodyBones.RightHand);
         [SerializeField] private bool m_UseSecondHand = false;
         [SerializeField] private Bone m_SecondHand = new Bone(HumanBodyBones.LeftHand);
 
         public Bone Bone => m_Hand;
         public GameObject Gun => m_GunPrefab.gameObject;
+
+        public Vector3 LocationOffset => this.m_Position;
+        public Quaternion RotationOffset => Quaternion.Euler(this.m_Rotation);
     }
 }

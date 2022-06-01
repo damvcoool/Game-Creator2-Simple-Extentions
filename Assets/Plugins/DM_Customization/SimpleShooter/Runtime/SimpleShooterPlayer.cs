@@ -24,7 +24,7 @@ namespace DM_Customization.Runtime.SimpleShooter
 
         private void Equip()
         {
-            p_Weapon = m_Character.Props.Attach(m_SimpleGun.Bone, m_SimpleGun.GunPrefab, m_SimpleGun.LocationOffset, m_SimpleGun.RotationOffset);
+            p_Weapon = m_Character.Props.Attach(m_SimpleGun.Bone, m_SimpleGun.Gun, m_SimpleGun.LocationOffset, m_SimpleGun.RotationOffset);
         }
 
 
