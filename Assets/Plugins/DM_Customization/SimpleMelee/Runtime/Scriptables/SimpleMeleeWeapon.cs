@@ -27,6 +27,7 @@ namespace DM_Customization.Runtime.SimpleMelee
         [SerializeField] private Bone m_Bone = new Bone(HumanBodyBones.RightHand);
         [SerializeField] private Vector3 m_Position = new Vector3();
         [SerializeField] private Vector3 m_Rotation;
+
         private Args m_Args;
 
         // PROPERTIES: ----------------------------------------------------------------------------

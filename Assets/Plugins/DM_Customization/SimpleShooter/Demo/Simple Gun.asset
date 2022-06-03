@@ -12,7 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf5a70fc6f4614bb1484eb70e524a7, type: 3}
   m_Name: Simple Gun
   m_EditorClassIdentifier: 
-  m_Prefab: {fileID: 0}
-  m_SimpleBullets: []
+  m_GunPrefab: {fileID: 0}
+  m_BulletPrefab: {fileID: 0}
+  m_AimState: {fileID: 0}
+  m_Layer: 1
+  m_BlendMode: 0
   m_Position: {x: 0, y: 0, z: 0}
-  m_Rotation: {x: 0, y: 0, z: 0, w: 0}
+  m_Rotation: {x: 0, y: 0, z: 0}
+  m_MainHand:
+    m_IsExpanded: 1
+    m_Breakpoint: 0
+    m_IsEnabled: 1
+    m_Type: 1
+    m_Human: 18
+    m_Path: 
+  m_UseSecondHand: 0
+  m_SecondHand:
+    m_IsExpanded: 1
+    m_Breakpoint: 0
+    m_IsEnabled: 1
+    m_Type: 1
+    m_Human: 17
+    m_Path: 

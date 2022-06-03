@@ -14,7 +14,7 @@ namespace DM_Customization.Runtime.SimpleMelee
         [SerializeField] public SimpleMeleeWeapon m_Weapon;
         private Character m_Character;
         private GameObject p_Weapon = null;
-        private bool isAttacking = false;
+        private bool p_IsAttacking = false;
         private void Start()
         {
             m_Character = this.GetComponent<Character>();
@@ -26,13 +26,13 @@ namespace DM_Customization.Runtime.SimpleMelee
         {
             if (m_Weapon)
             {
-                if (!this.isAttacking)
+                if (!this.p_IsAttacking)
                     this.Attack(this.m_Character, p_Weapon);
             }
         }
         public bool IsAttacking()
         {
-            return isAttacking;
+            return p_IsAttacking;
         }
 
         public void Equip()
@@ -52,13 +52,13 @@ namespace DM_Customization.Runtime.SimpleMelee
             AvatarMask avatarMask = m_Weapon.AvatarMask;
             float animTime = animClip.length;
             collider.enabled = true;
-            isAttacking = true;
+            p_IsAttacking = true;
             ConfigGesture configuration = new ConfigGesture(0, animTime / 1, 1, m_Weapon.UseRootMotion, 0.1f, 0.1f);
 
             Task gestureTask = character.Gestures.CrossFade(animClip, avatarMask, BlendMode.Blend, configuration, true);
 
             await gestureTask;
-            isAttacking = false;
+            p_IsAttacking = false;
             collider.enabled = false;
         }
 
