@@ -4,34 +4,31 @@ using System.Threading.Tasks;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.Characters;
 using UnityEngine;
+//Debug
+using UnityEngine.InputSystem;
 
 namespace DM_Customization.Runtime.SimpleShooter
 {
-    [AddComponentMenu("Game Creator/Custom/Simple Character Melee")]
+    [AddComponentMenu("Game Creator/Custom/Simple Character Shooter")]
     public class SimpleShooterCharacter : MonoBehaviour
     {
+        // EXPOSED MEMBERS: -----------------------------------------------------------------------
         [SerializeField] private SimpleShooterGun m_SimpleGun;
 
+        // MEMBERS: -----------------------------------------------------------------------
         private Character m_Character;
-        private GameObject p_Gun = null;
+        private GameObject p_Gun;
         private bool p_IsAiming = false;
         private bool p_IsShooting = false;
 
-
-        private void Start()
-        {
-
-            m_Character = this.GetComponent<Character>();
-            if (m_SimpleGun)
-                this.Equip();
-        }
-         
+        // PUBLIC METHODS: ------------------------------------------------------------------------
 
         public void CharacterShoot()
         {
-            if(this.p_IsAiming && !this.p_IsShooting)
+            if (this.p_IsAiming && !this.p_IsShooting)
             {
-                this.Shoot(this.m_Character, p_Gun);
+                p_IsShooting = true;
+                this.Shoot(this.m_Character, m_SimpleGun);
             }
         }
 
@@ -40,25 +37,47 @@ namespace DM_Customization.Runtime.SimpleShooter
 
         }
 
-        public void Equip()
+        public void ChangeWeapon(SimpleShooterGun simpleGun)
         {
-            p_Gun = m_Character.Props.Attach(m_SimpleGun.Bone, m_SimpleGun.GunPrefab, m_SimpleGun.LocationOffset, m_SimpleGun.RotationOffset);
+            this.UnEquip();
+            m_SimpleGun = simpleGun;
+            this.Equip(simpleGun);
+        }
+
+        public void Equip(SimpleShooterGun simpleGun)
+        {
+            p_Gun = m_Character.Props.Attach(simpleGun.MainBone, simpleGun.Gun.gameObject, simpleGun.LocationOffset, simpleGun.RotationOffset);
         }
 
         public void UnEquip()
         {
-            m_Character.Props.Remove(m_SimpleGun.GunPrefab);
+            m_Character.Props.Remove(m_SimpleGun.Gun.gameObject);
             m_SimpleGun = null;
+            p_Gun = null;
         }
-
-        private async void Shoot(Character character, GameObject gun)
+        // PRIVATE METHODS: ------------------------------------------------------------------------
+        private void Start()
         {
-            Debug.Log($"{character.name} is Getting Ready");
 
-            await Task.Delay(5000);
-
-            Debug.Log($"{character.name} did BANG! BANG! with {gun.name}");
+            m_Character = this.GetComponent<Character>();
+            if (m_SimpleGun)
+                this.Equip(m_SimpleGun);
         }
 
+        private void Shoot(Character character, SimpleShooterGun simpleGun)
+        {
+            if (p_Gun == null) return;
+
+            Instantiate(simpleGun.Bullet.gameObject, p_Gun.GetComponent<SimpleGunElement>().m_BulletSpawn.transform.position, p_Gun.GetComponent<SimpleGunElement>().m_BulletSpawn.transform.rotation);
+            p_IsShooting = false;
+        }
+
+
+        // Debug
+        private void Update()
+        {
+            if(Keyboard.current.anyKey.isPressed)
+                Shoot(m_Character, m_SimpleGun);
+        }
     }
 }
