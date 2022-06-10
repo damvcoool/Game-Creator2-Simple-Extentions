@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.Characters;
+using GameCreator.Runtime.Cameras;
 using UnityEngine;
-//Debug
-using UnityEngine.InputSystem;
 
 namespace DM_Customization.Runtime.SimpleShooter
 {
@@ -14,6 +13,7 @@ namespace DM_Customization.Runtime.SimpleShooter
     {
         // EXPOSED MEMBERS: -----------------------------------------------------------------------
         [SerializeField] private SimpleShooterGun m_SimpleGun;
+        [SerializeField] private ShotCamera m_AimCameraShot;
 
         // MEMBERS: -----------------------------------------------------------------------
         private Character m_Character;
@@ -28,13 +28,27 @@ namespace DM_Customization.Runtime.SimpleShooter
             if (this.p_IsAiming && !this.p_IsShooting)
             {
                 p_IsShooting = true;
-                this.Shoot(this.m_Character, m_SimpleGun);
+                this.Shoot(m_SimpleGun);
             }
         }
 
-        public void CharacterAim()
+        public void CharacterStartAim()
         {
+            ConfigState configuration = new ConfigState(
+                0, 1, 1,
+                0.3f, 0f
+            );
 
+            _ = m_Character.States.SetState(
+                m_SimpleGun.AimState, m_SimpleGun.Layer,
+                m_SimpleGun.BlendMode, configuration
+            );
+            p_IsAiming = true;
+        }
+        public void CharacterStoptAim()
+        {
+            m_Character.States.Stop(m_SimpleGun.Layer, 0f, 0.3f);
+            p_IsAiming = false;
         }
 
         public void ChangeWeapon(SimpleShooterGun simpleGun)
@@ -64,20 +78,12 @@ namespace DM_Customization.Runtime.SimpleShooter
                 this.Equip(m_SimpleGun);
         }
 
-        private void Shoot(Character character, SimpleShooterGun simpleGun)
+        private void Shoot(SimpleShooterGun simpleGun)
         {
             if (p_Gun == null) return;
 
             Instantiate(simpleGun.Bullet.gameObject, p_Gun.GetComponent<SimpleGunElement>().m_BulletSpawn.transform.position, p_Gun.GetComponent<SimpleGunElement>().m_BulletSpawn.transform.rotation);
             p_IsShooting = false;
-        }
-
-
-        // Debug
-        private void Update()
-        {
-            if(Keyboard.current.anyKey.isPressed)
-                Shoot(m_Character, m_SimpleGun);
         }
     }
 }

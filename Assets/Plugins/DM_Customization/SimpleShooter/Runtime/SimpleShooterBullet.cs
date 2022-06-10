@@ -8,7 +8,7 @@ using GameCreator.Runtime.VisualScripting;
 
 namespace DM_Customization.Runtime.SimpleShooter
 {
-    [CreateAssetMenu(fileName = "Simple Bullet", menuName = "Game Creator/Simple Shooter/Simple Bullet")]
+    [AddComponentMenu("Game Creator/Custom/Simple Bullet")]
     [RequireComponent(typeof(Collider))]
     public class SimpleShooterBullet : MonoBehaviour
     {
@@ -49,6 +49,7 @@ namespace DM_Customization.Runtime.SimpleShooter
 
             rb = GetComponent<Rigidbody>();
             rb.useGravity = false;
+            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
             
         }
         private void Start()
