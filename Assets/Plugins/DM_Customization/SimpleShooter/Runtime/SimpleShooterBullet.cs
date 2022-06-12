@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.VisualScripting;
@@ -22,6 +23,7 @@ namespace DM_Customization.Runtime.SimpleShooter
         // MEMBERS: -----------------------------------------------------------------------
         private Rigidbody rb;
         private GameObject target;
+        private bool isTrigger = false;
 
         // EVENTS: --------------------------------------------------------------------------------
 
@@ -44,23 +46,37 @@ namespace DM_Customization.Runtime.SimpleShooter
 
         private void Awake()
         {
+
+            if (this.GetComponent<Collider>().isTrigger) isTrigger = true;
+
             if (!GetComponent<Rigidbody>())
                 gameObject.AddComponent<Rigidbody>();
-
             rb = GetComponent<Rigidbody>();
             rb.useGravity = false;
-            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-            
         }
         private void Start()
         {
             rb.velocity = transform.forward * m_BulletSpeed;
+
+            Destroy(this.gameObject, 30);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            target = other.gameObject;
-            OnBulletHit();
+            if (isTrigger)
+            {
+                target = other.gameObject;
+                OnBulletHit();
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (!isTrigger)
+            {
+                target = collision.gameObject;
+                OnBulletHit();
+            }
         }
     }
 }

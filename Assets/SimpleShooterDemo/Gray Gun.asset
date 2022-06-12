@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cccf5a70fc6f4614bb1484eb70e524a7, type: 3}
-  m_Name: Simple Gun
+  m_Name: Gray Gun
   m_EditorClassIdentifier: 
   m_GunPrefab: {fileID: 5859212052671358962, guid: 986353b2efdb8bf458367728b285545b, type: 3}
-  m_BulletPrefab: {fileID: 477266599198112280, guid: ee7cbf5011bcd824c903772b0be1e3ab, type: 3}
+  m_BulletPrefab: {fileID: 477266599198112280, guid: 4761548c833d94a4b9f3295eed39f5d7, type: 3}
   m_AimState: {fileID: 11400000, guid: c0fda94d01583724cb8906e482f1e308, type: 2}
   m_Layer: 1
   m_BlendMode: 0

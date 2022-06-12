@@ -8,10 +8,10 @@ namespace DM_Customization.Runtime.SimpleMelee
 {
     [Version(1, 0, 0)]
 
-    [Title("Change Weapon")]
-    [Description("Changes equipped weapon")]
+    [Title("Change Melee Weapon")]
+    [Description("Changes equipped melee weapon")]
 
-    [Category("Simple Melee/Change Weapon")]
+    [Category("Simple Melee/Change Melee Weapon")]
 
     [Parameter("Character", "The Character that will initiate the attack")]
     [Parameter("Melee Weapon", "The new Weapon")]

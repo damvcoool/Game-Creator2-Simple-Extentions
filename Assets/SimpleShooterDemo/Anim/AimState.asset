@@ -10,7 +10,7 @@ AnimatorOverrideController:
   m_Controller: {fileID: 9100000, guid: 2c8b7312f36f04157932300782d990e0, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 3fd1b37d27b754527950ef1a42916157, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 33516075380941f4c802152277ec9ef1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d157232200478a44aa2cd5f60010fc59, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 232752578b594dac8363ce5618d051fa, type: 3}
   m_Name: AimState
   m_EditorClassIdentifier: 
-  m_StateMask: {fileID: 0}
+  m_StateMask: {fileID: 31900000, guid: 0f62334082a1bfa4092834095081c127, type: 2}
   m_Entry:
     m_EntryClip: {fileID: 0}
     m_EntryMask: {fileID: 0}
@@ -33,7 +33,7 @@ MonoBehaviour:
   m_OnChange:
     m_Instructions: []
   m_Controller: {fileID: -5989844621682488127}
-  m_StateClip: {fileID: 7400000, guid: 33516075380941f4c802152277ec9ef1, type: 2}
+  m_StateClip: {fileID: 7400000, guid: d157232200478a44aa2cd5f60010fc59, type: 2}
   references:
     version: 2
     RefIds: []
