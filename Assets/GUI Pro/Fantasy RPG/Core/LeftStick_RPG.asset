@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bff08d7c2d447da2e9bbb327ef3644, type: 3}
+  m_Name: LeftStick_RPG
+  m_EditorClassIdentifier: 
+  m_Value: {fileID: 8195790294342871810, guid: 45ff1d5ff9d11104089220cb59db2b3d, type: 3}

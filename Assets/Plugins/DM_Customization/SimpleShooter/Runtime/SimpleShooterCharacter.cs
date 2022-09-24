@@ -55,9 +55,10 @@ namespace DM_Customization.Runtime.SimpleShooter
             m_Camera.Transition.ChangeToShot(m_AimCameraShot, 0.3f, Easing.Type.Linear);
             if (!m_Character.IK.HasRig<AimTrack>()) { Debug.LogWarning($"{m_Character.name} is missing Aim Weapon IK Track"); return; }
             m_Character.IK.GetRig<AimTrack>().SetTarget(new LookTrackTransform(1, m_AimPosition, Vector3.zero));
-            
-            if(m_Character.IK.HasRig<RigLookTrack>())
+
+            if (m_Character.IK.HasRig<RigLookTrack>())
                 m_Character.IK.GetRig<RigLookTrack>().SetTarget(new LookTrackTransform(1, m_AimPosition, Vector3.zero));
+            m_Character.IK.GetRig<RigLookTrack>().IsActive = false;
 
             if (m_Character.IK.HasRig<RigLean>())
                 m_Character.IK.GetRig<RigLean>().IsActive = false;
@@ -74,7 +75,7 @@ namespace DM_Customization.Runtime.SimpleShooter
             m_Character.IK.GetRig<AimTrack>().RemoveTarget(new LookTrackTransform(1, m_AimPosition, Vector3.zero));
 
             if (m_Character.IK.HasRig<RigLookTrack>())
-                m_Character.IK.GetRig<RigLookTrack>().RemoveTarget(new LookTrackTransform(1, m_AimPosition, Vector3.zero));
+                m_Character.IK.GetRig<RigLookTrack>().IsActive = true;// RemoveTarget(new LookTrackTransform(1, m_AimPosition, Vector3.zero));
 
             if (m_Character.IK.HasRig<RigLean>())
                 m_Character.IK.GetRig<RigLean>().IsActive = true;
