@@ -17,10 +17,11 @@ To take advantage of the code and samples on this repository you will need the f
 - [Inventory 2](https://assetstore.unity.com/packages/tools/utilities/inventory-2-208668)
 - [Status 2](https://assetstore.unity.com/packages/tools/utilities/stats-2-206959)
 - [Dialogue 2](https://assetstore.unity.com/packages/tools/gui/dialogue-2-218635)
+- [Quest 2] (https://assetstore.unity.com/packages/tools/game-toolkits/quests-2-232532)
 - Input System
 - Animation Rigging
 - Burst
-- All the Examples from GC2, Stats2, Inventory and Dialogue
+- All the Examples from GC2, Stats 2, Inventory 2, Dialogue 2 and Quest 2
 
 ### Additional Requirements
 Some of the examples will also require some custom Actions, Conditions and Triggers that can be downloaded from the [Game Creator Hub](https://gamecreator.io/hub)
