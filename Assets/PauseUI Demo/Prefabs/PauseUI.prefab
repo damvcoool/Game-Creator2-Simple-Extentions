@@ -281,21 +281,21 @@ MonoBehaviour:
       m_Calls: []
   m_Instructions:
     m_Instructions:
-    - rid: 3620966746316603476
+    - rid: 6558878358524133401
   references:
     version: 2
     RefIds:
-    - rid: 3620966746316603476
-      type: {class: InstructionPauseUI, ns: DM_Customization.Runtime, asm: Assembly-CSharp-firstpass}
+    - rid: 6558878358524133401
+      type: {class: InstructionPauseUI, ns: DM_Customization.Runtime.Pause, asm: Assembly-CSharp-firstpass}
       data:
         m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_PauseUI:
           m_Property:
-            rid: 3620966746316603479
+            rid: 6558878358524133403
         m_State: 1
-    - rid: 3620966746316603479
+    - rid: 6558878358524133403
       type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
 --- !u!1 &4159908085827926967
 GameObject:
@@ -556,31 +556,29 @@ MonoBehaviour:
       m_Calls: []
   m_Instructions:
     m_Instructions:
-    - rid: 6182348774133727353
+    - rid: 6558878358524133404
     - rid: 6182348774133727281
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 3620966746316603481
-      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
     - rid: 6182348774133727281
       type: {class: InstructionAppQuit, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
-    - rid: 6182348774133727353
-      type: {class: InstructionPauseUI, ns: DM_Customization, asm: Assembly-CSharp-firstpass}
+    - rid: 6558878358524133404
+      type: {class: InstructionPauseUI, ns: DM_Customization.Runtime.Pause, asm: Assembly-CSharp-firstpass}
       data:
         m_IsExpanded: 1
         m_Breakpoint: 0
         m_IsEnabled: 1
         m_PauseUI:
           m_Property:
-            rid: 6182348774133727354
+            rid: 6558878358524133406
         m_State: 1
+    - rid: 6558878358524133406
+      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
 --- !u!1 &5046482024723916166
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +638,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
