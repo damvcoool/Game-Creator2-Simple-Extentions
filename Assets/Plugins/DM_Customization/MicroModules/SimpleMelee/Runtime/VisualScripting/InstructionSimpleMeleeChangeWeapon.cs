@@ -26,17 +26,21 @@ namespace DM_Customization.Runtime.SimpleMelee
         [SerializeField] private PropertyGetGameObject m_Character = GetGameObjectPlayer.Create();
         [SerializeField] private SimpleMeleeWeapon m_MeleeWeapon;
 
-        public override string Title => $"Change {this.m_Character} Weapon for {m_MeleeWeapon.name}";
+        public override string Title => string.Format("Change {0} Weapon for {1}", this.m_Character, m_MeleeWeapon ? m_MeleeWeapon.name : "Unequip");
         protected override Task Run(Args args)
         {
-            if (m_MeleeWeapon == null) return DefaultResult;
+            //if (m_MeleeWeapon == null) return DefaultResult;
 
             SimpleMeleeCharacter characterMelee = m_Character.Get(args).GetComponent<SimpleMeleeCharacter>();
             if (characterMelee == null) return DefaultResult;
 
-            characterMelee.UnEquip();
-            characterMelee.m_Weapon = m_MeleeWeapon;
-            characterMelee.Equip();
+            if(characterMelee.HasWeapon()) characterMelee.UnEquip();
+            if (m_MeleeWeapon != null)
+            {
+                characterMelee.m_Weapon = m_MeleeWeapon;
+                characterMelee.Equip();
+            }
+            Debug.Log(m_MeleeWeapon);
 
             return DefaultResult;
         }

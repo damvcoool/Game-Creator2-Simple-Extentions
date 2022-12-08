@@ -93,12 +93,12 @@ namespace DM_Customization.Runtime.SimpleShooter
 
         public void Equip(SimpleShooterGun simpleGun)
         {
-            p_Gun = m_Character.Props.Attach(simpleGun.MainBone, simpleGun.Gun.gameObject, simpleGun.LocationOffset, simpleGun.RotationOffset);
+            p_Gun = m_Character.Props.AttachPrefab(simpleGun.MainBone, simpleGun.Gun.gameObject, simpleGun.LocationOffset, simpleGun.RotationOffset);
         }
 
         public void UnEquip()
         {
-            m_Character.Props.Remove(m_SimpleGun.Gun.gameObject);
+            m_Character.Props.RemovePrefab(m_SimpleGun.Gun.gameObject);
             m_SimpleGun = null;
             p_Gun = null;
         }

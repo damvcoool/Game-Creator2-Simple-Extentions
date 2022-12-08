@@ -37,12 +37,21 @@ namespace DM_Customization.Runtime.SimpleMelee
 
         public void Equip()
         {
-            p_Weapon = m_Character.Props.Attach(m_Weapon.Bone, m_Weapon.WeaponPrefab,m_Weapon.LocationOffset, m_Weapon.RotationOffset);
+            p_Weapon = m_Character.Props.AttachPrefab(m_Weapon.Bone, m_Weapon.WeaponPrefab,m_Weapon.LocationOffset, m_Weapon.RotationOffset);
         }
         public void UnEquip()
         {
-            m_Character.Props.Remove(m_Weapon.WeaponPrefab);
+            p_Weapon.GetComponent<Rigidbody>().isKinematic = false;
+            p_Weapon.GetComponent<Collider>().enabled = true;
+            p_Weapon.GetComponent<Collider>().isTrigger = false;
+            m_Character.Props.DropPrefab(m_Weapon.WeaponPrefab);//RemovePrefab(m_Weapon.WeaponPrefab);
             m_Weapon = null;
+        }
+        public bool HasWeapon()
+        {
+            if(this.m_Weapon == null) return false;
+            Debug.Log("Has Weapon");
+            return true;
         }
 
         private async void Attack(Character character, GameObject weapon)
