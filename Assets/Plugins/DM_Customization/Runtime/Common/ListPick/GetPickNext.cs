@@ -15,14 +15,14 @@ namespace DM_Customization.Runtime.Common
     {
         int current = 0;
         
-        public override int GetIndex(int count)
+        public override int GetIndex(int count, Args args)
         {
-            
+            current++;
             if (count <= current)
             {
                 current = 0;
             }
-            return current++;
+            return current;
         }  
         
         public override string ToString() => "Next";

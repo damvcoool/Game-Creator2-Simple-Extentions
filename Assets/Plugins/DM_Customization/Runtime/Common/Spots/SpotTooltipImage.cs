@@ -43,7 +43,7 @@ namespace DM_Customization.Runtime.Common
         
         // PROPERTIES: ----------------------------------------------------------------------------
 
-        public override string Title => $"Show {this.m_Image}";
+        public override string Title => $"Show " + this.m_Image;
 
         // OVERRIDE METHODS: ----------------------------------------------------------------------
 

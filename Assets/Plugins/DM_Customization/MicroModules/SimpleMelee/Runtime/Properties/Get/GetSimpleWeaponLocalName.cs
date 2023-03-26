@@ -17,8 +17,8 @@ namespace DM_Customization.Runtime.SimpleMelee
         [SerializeField]
         protected FieldGetLocalName m_Variable = new FieldGetLocalName(SimpleMeleeWeaponValue.TYPE_ID);
 
-        public override SimpleMeleeWeapon Get(Args args) => this.m_Variable.Get<SimpleMeleeWeapon>();
-        public override SimpleMeleeWeapon Get(GameObject gameObject) => this.m_Variable.Get<SimpleMeleeWeapon>();
+        public override SimpleMeleeWeapon Get(Args args) => this.m_Variable.Get<SimpleMeleeWeapon>(args);
+        //public override SimpleMeleeWeapon Get(GameObject gameObject) => this.m_Variable.Get<SimpleMeleeWeapon>();
 
         public override string String => this.m_Variable.ToString();
     }

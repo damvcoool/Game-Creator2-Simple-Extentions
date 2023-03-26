@@ -15,7 +15,7 @@ namespace DM_Customization.Runtime.Common
     {
         int current = 0;
         
-        public override int GetIndex(int count)
+        public override int GetIndex(int count, Args args)
         {
             current--;
             if (current < 0)

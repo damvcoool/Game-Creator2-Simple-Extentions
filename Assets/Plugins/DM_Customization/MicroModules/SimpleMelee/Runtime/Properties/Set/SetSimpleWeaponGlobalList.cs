@@ -17,11 +17,11 @@ namespace DM_Customization.Runtime.SimpleMelee
         [SerializeField]
         protected FieldSetGlobalList m_Variable = new FieldSetGlobalList(SimpleMeleeWeaponValue.TYPE_ID);
 
-        public override void Set(SimpleMeleeWeapon value, Args args) => this.m_Variable.Set(value);
-        public override void Set(SimpleMeleeWeapon value, GameObject gameObject) => this.m_Variable.Set(value);
+        public override void Set(SimpleMeleeWeapon value, Args args) => this.m_Variable.Set(value, args);
+        //public override void Set(SimpleMeleeWeapon value, GameObject gameObject) => this.m_Variable.Set(value);
 
-        public override SimpleMeleeWeapon Get(Args args) => this.m_Variable.Get() as SimpleMeleeWeapon;
-        public override SimpleMeleeWeapon Get(GameObject gameObject) => this.m_Variable.Get() as SimpleMeleeWeapon;
+        public override SimpleMeleeWeapon Get(Args args) => this.m_Variable.Get(args) as SimpleMeleeWeapon;
+        //public override SimpleMeleeWeapon Get(GameObject gameObject) => this.m_Variable.Get() as SimpleMeleeWeapon;
         
         public static PropertySetSimpleWeapon Create => new PropertySetSimpleWeapon(
             new SetSimpleWeaponGlobalList()
