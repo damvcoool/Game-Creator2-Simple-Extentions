@@ -3820,6 +3820,10 @@ MonoBehaviour:
           m_AirJumps: 0
           m_JumpForce: 5
           m_JumpCooldown: 0.5
+        m_Dash:
+          m_InSuccession: 0
+          m_DashInAir: 0
+          m_Cooldown: 1
     - rid: 3620966735782084621
       type: {class: UnitDriverController, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -3871,6 +3875,7 @@ MonoBehaviour:
         m_FootMask:
           serializedVersion: 2
           m_Bits: 4294967295
+        m_SmoothTime: 0.25
     - rid: 3620966735782084626
       type: {class: RigLean, ns: GameCreator.Runtime.Characters.IK, asm: GameCreator.Runtime.Core}
       data:
@@ -4441,6 +4446,10 @@ MonoBehaviour:
           m_AirJumps: 0
           m_JumpForce: 5
           m_JumpCooldown: 0.5
+        m_Dash:
+          m_InSuccession: 0
+          m_DashInAir: 0
+          m_Cooldown: 1
     - rid: 3620966735782084633
       type: {class: UnitDriverController, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -4492,6 +4501,7 @@ MonoBehaviour:
         m_FootMask:
           serializedVersion: 2
           m_Bits: 4294967295
+        m_SmoothTime: 0.25
     - rid: 3620966735782084638
       type: {class: RigLean, ns: GameCreator.Runtime.Characters.IK, asm: GameCreator.Runtime.Core}
       data:
@@ -5856,6 +5866,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &898714461
 Transform:
   m_ObjectHideFlags: 0
@@ -5930,7 +5941,7 @@ MonoBehaviour:
         m_Character:
           m_Property:
             rid: 6066245540055875611
-        m_MeleeWeapon: {fileID: 0}
+        m_MeleeWeapon: {fileID: 11400000, guid: cfb28da24082756428b1a0944b5b0625, type: 2}
     - rid: 6066245540055875611
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
 --- !u!65 &913920264
@@ -7840,7 +7851,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 6066245540055875594
-      type: {class: EventOnInput, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      type: {class: EventOnInputButton, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
         m_Button:
           m_Input:
@@ -10857,6 +10868,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1787226272
 Transform:
   m_ObjectHideFlags: 0
@@ -11517,6 +11529,10 @@ MonoBehaviour:
           m_AirJumps: 0
           m_JumpForce: 5
           m_JumpCooldown: 0.5
+        m_Dash:
+          m_InSuccession: 0
+          m_DashInAir: 0
+          m_Cooldown: 1
     - rid: 3620966735782084633
       type: {class: UnitDriverController, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data:
@@ -11568,6 +11584,7 @@ MonoBehaviour:
         m_FootMask:
           serializedVersion: 2
           m_Bits: 4294967295
+        m_SmoothTime: 0.25
     - rid: 3620966735782084638
       type: {class: RigLean, ns: GameCreator.Runtime.Characters.IK, asm: GameCreator.Runtime.Core}
       data:
@@ -12104,7 +12121,6 @@ MonoBehaviour:
       type: {class: ShotTypeThirdPerson, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
       data:
         m_ShotSystemViewport:
-          m_SmoothTime: 0.01
           m_Projection:
             m_IsEnabled: 0
             m_Value: 0
@@ -12114,6 +12130,12 @@ MonoBehaviour:
           m_OrthographicSize:
             m_IsEnabled: 0
             m_Value: 5
+          m_ClipPlaneNear:
+            m_IsEnabled: 0
+            m_Value: 0.3
+          m_ClipPlaneFar:
+            m_IsEnabled: 0
+            m_Value: 1000
         m_ShotSystemLook:
           m_IsActive: 1
           m_LookTarget:
@@ -12691,6 +12713,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1998007272
 Transform:
   m_ObjectHideFlags: 0
