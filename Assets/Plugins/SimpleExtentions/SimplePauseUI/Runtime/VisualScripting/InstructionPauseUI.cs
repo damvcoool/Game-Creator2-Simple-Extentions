@@ -30,6 +30,7 @@ namespace SimpleExtentions.Runtime.Pause
             Open,
             Close
         }
+
         [SerializeField] private PropertyGetGameObject m_PauseUI;
         [SerializeField] private EnumState m_State = EnumState.Open;
         private PauseUI pauseUI;
