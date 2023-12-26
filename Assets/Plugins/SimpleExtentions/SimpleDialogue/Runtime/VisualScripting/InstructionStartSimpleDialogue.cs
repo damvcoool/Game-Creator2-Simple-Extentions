@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Threading.Tasks;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.VisualScripting;
+using Unity.VisualScripting;
 
 namespace SimpleExtentions.Runtime.SimpleDialogue
 {
@@ -23,17 +24,17 @@ namespace SimpleExtentions.Runtime.SimpleDialogue
     [Serializable]
     public class InstructionStartSimpleDialogue : Instruction
     {
-        [SerializeField] private PropertyGetGameObject m_Character = GetGameObjectTransform.Create();
-        [SerializeField] private SimpleDialogueUI m_DisplayMe;
-        
-        
+        [SerializeField] private PropertyGetGameObject m_Character = GetGameObjectSelf.Create();
+        [SerializeField] private SimpleDialogueUI m_SimpleDialogue;
+
+        public override string Title => String.Format("Display {0}", this.m_SimpleDialogue == null ? "(none)" : this.m_SimpleDialogue.name);
         protected override Task Run(Args args)
         {
             SimpleDialogueUI bubble = m_Character.Get(args).gameObject.GetComponentInChildren<SimpleDialogueUI>();
             string charcterName = m_Character.Get(args).name;
 
             if (bubble == null)
-                bubble = SimpleDialogueUI.Instantiate(m_DisplayMe, m_Character.Get(args).transform, false);
+                bubble = SimpleDialogueUI.Instantiate(m_SimpleDialogue, m_Character.Get(args).transform, false);
             
             bubble.StartDialogue(charcterName);
             return DefaultResult;

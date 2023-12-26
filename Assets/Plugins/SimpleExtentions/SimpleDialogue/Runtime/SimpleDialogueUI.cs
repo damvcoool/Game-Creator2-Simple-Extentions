@@ -6,6 +6,8 @@ using GameCreator.Runtime.Variables;
 using GameCreator.Runtime.Common.UnityUI;
 using UnityEngine.UI;
 using SimpleExtentions.Runtime.Common;
+using TMPro;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -94,6 +96,14 @@ namespace SimpleExtentions.Runtime.SimpleDialogue
         }
 
         // PUBLIC METHODS: ------------------------------------------------------------------------
+        public static SimpleDialogueUI CreateFromTMP(GameObject gameObject, GameObject image, TMP_Text text)
+        {
+            SimpleDialogueUI simpleDialogueUI = gameObject.gameObject.AddComponent<SimpleDialogueUI>();
+            simpleDialogueUI.m_Text = new TextReference(text);
+            simpleDialogueUI.m_Container = image;
+
+            return simpleDialogueUI;
+        }
         public static SimpleDialogueUI CreateFrom(GameObject gameObject, GameObject image, Text text)
         {
             SimpleDialogueUI simpleDialogueUI = gameObject.gameObject.AddComponent<SimpleDialogueUI>();

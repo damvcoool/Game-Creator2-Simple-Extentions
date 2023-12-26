@@ -56,33 +56,62 @@ namespace SimpleExtentions.Editor.SimpleDialogue
         }
         // CREATION MENU: -------------------------------------------------------------------------
 
-        [MenuItem("GameObject/Game Creator/UI/Simple Dialogue UI", false, 0)]
-        public static void CreateElement(MenuCommand menuCommand)
+        [MenuItem("GameObject/Game Creator/UI/Simple Dialogue UI (TMP)", false, 0)]
+        public static void CreateElementTMP(MenuCommand menuCommand)
         {
-            GameObject canvas = UnityUIUtilities.GetCanvas();
-            GameObject gameObject = new GameObject();
+            TMP_DefaultControls.Resources TMPResources = new TMP_DefaultControls.Resources();
 
-            gameObject.transform.SetParent(canvas.transform, false);
-            gameObject.name = "Simple Dialogue UI";
+            GameObject canvas = UnityUIUtilities.GetCanvas();
+            GameObject simpleDialogueUI = new GameObject("Simple Dialogue UI",typeof(RectTransform));
+
+            simpleDialogueUI.transform.SetParent(canvas.transform, false);
 
             DefaultControls.Resources resources = UnityUIUtilities.GetStandardResources();
 
             GameObject Container = DefaultControls.CreateImage(resources);
-            Container.transform.SetParent(gameObject.transform, false);
+            Container.transform.SetParent(simpleDialogueUI.transform, false);
+            Container.name = "Container";
+
+            
+            GameObject Text = TMP_DefaultControls.CreateText(TMPResources);
+            Text.transform.SetParent(Container.transform, false);
+            Text.name = "Text";
+
+            TMP_Text text = Text.GetComponent<TMP_Text>();
+            text.SetText("Hello World");
+            text.color = Color.black;
+
+            SimpleDialogueUI.CreateFromTMP(simpleDialogueUI, Container, text);
+
+            Undo.RegisterCreatedObjectUndo(simpleDialogueUI, $"Create {simpleDialogueUI.gameObject.name}");
+            Selection.activeGameObject = simpleDialogueUI;
+        }
+
+        [MenuItem("GameObject/Game Creator/UI/Simple Dialogue UI", false, 0)]
+        public static void CreateElement(MenuCommand menuCommand)
+        {
+            GameObject canvas = UnityUIUtilities.GetCanvas();
+            GameObject simpleDialogueUI = new GameObject("Simple Dialogue UI", typeof(RectTransform));
+
+            simpleDialogueUI.transform.SetParent(canvas.transform, false);
+
+            DefaultControls.Resources resources = UnityUIUtilities.GetStandardResources();
+
+            GameObject Container = DefaultControls.CreateImage(resources);
+            Container.transform.SetParent(simpleDialogueUI.transform, false);
             Container.name = "Container";
 
             GameObject Text = DefaultControls.CreateText(resources);
             Text.transform.SetParent(Container.transform, false);
             Text.name = "Text";
-     
 
             Text text = Text.GetComponent<Text>();
             text.text = "Hello World";
 
-            SimpleDialogueUI.CreateFrom(gameObject, Container, text);
+            SimpleDialogueUI.CreateFrom(simpleDialogueUI, Container, text);
 
-            Undo.RegisterCreatedObjectUndo(gameObject, $"Create {gameObject.name}");
-            Selection.activeGameObject = gameObject;
+            Undo.RegisterCreatedObjectUndo(simpleDialogueUI, $"Create {simpleDialogueUI.gameObject.name}");
+            Selection.activeGameObject = simpleDialogueUI;
         }
     }
 }
