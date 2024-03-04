@@ -1,14 +1,17 @@
-# GameCreator2 Code Samples
+# GameCreator2 Simple Extensions
 In this respository I will upload code I use in Game Creator 2 that cannot be uploaded to the Hub.
 
-A few examples are:
-- Extended Driver controllers for the Player and Characters
+A few of the extensions are:
+- Extended Unit Driver controllers for the Player and Characters
 - Input Usage actions
-- Micro Modules
+- Micro Extensions or Micro Modules
+  - Simple Melee
+  - Simple Dialogue
+  - Simple Pause
 
 Things I will not include:
 - Instructions uploaded to the Hub
-- Game Creator Core code, or code in the modules
+- Game Creator 2 Core code, or code in the modules
 
 ## Requirements
 To take advantage of the code and samples on this repository you will need the following:
@@ -19,7 +22,6 @@ To take advantage of the code and samples on this repository you will need the f
 - [Dialogue 2](https://assetstore.unity.com/packages/tools/gui/dialogue-2-218635)
 - [Quest 2] (https://assetstore.unity.com/packages/tools/game-toolkits/quests-2-232532)
 - Input System
-- Animation Rigging
 - Burst
 - All the Examples from GC2, Stats 2, Inventory 2, Dialogue 2 and Quest 2
 
