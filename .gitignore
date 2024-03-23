@@ -84,3 +84,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Tt]ripolygon.meta
 /[Aa]ssets/[Tt]extMesh Pro.meta
 /[Aa]ssets/[Uu][Mm]otion[Ee]ditor.meta
+/[Aa]ssets/[Ll]ayer [Ll]ab/*
+/[Aa]ssets/[Ll]ayer [Ll]ab.meta
