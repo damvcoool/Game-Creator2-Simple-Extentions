@@ -121,6 +121,7 @@ namespace SimpleExtentions.Runtime.SimpleDialogue
         }
         private async void OnContinue()
         {
+            if(m_Args == null) return;
             float duration = (float)m_IntervalTime.Get(m_Args);
 
             for (int i = 0; i < m_DialogueText.Get(m_Args).Count; i++)

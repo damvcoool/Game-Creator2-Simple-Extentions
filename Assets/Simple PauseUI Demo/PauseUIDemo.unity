@@ -741,6 +741,26 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 5658876827763736628
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 7e8cefc5be22bc44ba914e9f75830fe6, type: 2}
+          m_Name:
+            m_String: PauseUI
+            m_ID: -1283861739
+    - rid: 5658876827763736629
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 7e8cefc5be22bc44ba914e9f75830fe6, type: 2}
+          m_Name:
+            m_String: PauseUI
+            m_ID: -1283861739
     - rid: 6302707498019979293
       type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -766,12 +786,8 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_PauseUI:
           m_Property:
-            rid: 6302707498019979296
+            rid: 5658876827763736628
         m_State: 0
-    - rid: 6302707498019979296
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 5046482024723916166, guid: 480506b48127f2143b2525e921f5bf65, type: 3}
     - rid: 6302707498019979297
       type: {class: Branch, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -797,12 +813,8 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_PauseUI:
           m_Property:
-            rid: 6302707498019979300
+            rid: 5658876827763736629
         m_State: 1
-    - rid: 6302707498019979300
-      type: {class: GetGameObjectInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_GameObject: {fileID: 5046482024723916166, guid: 480506b48127f2143b2525e921f5bf65, type: 3}
 --- !u!4 &1470194005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6850921225140801634, guid: 567769a2d701d4dff8350f9c2b29b663, type: 3}

@@ -2848,7 +2848,9 @@ MonoBehaviour:
             m_InteractionMode:
               rid: 6302707468022317083
         m_Speed: 4
-        m_Rotation: 1800
+        m_Rotation:
+          m_IsEnabled: 1
+          m_Value: 1800
         m_Mass: 80
         m_Height: 2
         m_Radius: 0.2
@@ -7446,12 +7448,12 @@ MonoBehaviour:
     m_UpdateTime: 0
   m_Clipping: 0
   m_ShotType:
-    rid: 6302707468022317151
+    rid: 5658876829009970162
   references:
     version: 2
     RefIds:
-    - rid: 6302707468022317151
-      type: {class: ShotTypeFixed, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
+    - rid: 5658876829009970162
+      type: {class: ShotTypeTrack, ns: GameCreator.Runtime.Cameras, asm: GameCreator.Runtime.Core}
       data:
         m_ShotSystemViewport:
           m_Projection:
@@ -7473,14 +7475,35 @@ MonoBehaviour:
           m_IsActive: 1
           m_LookTarget:
             m_Property:
-              rid: 6302707468022317152
+              rid: 5658876829009970163
           m_LookOffset:
             m_Property:
-              rid: 6302707468022317153
-    - rid: 6302707468022317152
+              rid: 5658876829009970164
+        m_ShotSystemTrack:
+          m_Target:
+            m_Property:
+              rid: 5658876829009970165
+          m_Offset:
+            m_Property:
+              rid: 5658876829009970166
+          m_Track:
+            m_PointA: {x: 0, y: 0, z: -2.7147412}
+            m_ControlA: {x: 0.028319836, y: 0, z: 1.7726929}
+            m_PointB: {x: 0, y: 0, z: 7.347338}
+            m_ControlB: {x: 0.028319836, y: 0, z: -3.124906}
+          m_RelativeTo:
+            m_PointA: {x: 0, y: -2, z: -3}
+            m_PointB: {x: 0, y: -2, z: 7.88656}
+    - rid: 5658876829009970163
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 6302707468022317153
+    - rid: 5658876829009970164
+      type: {class: GetDirectionVector3Zero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5658876829009970165
+      type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 5658876829009970166
       type: {class: GetDirectionVector3Zero, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
 --- !u!4 &1360314568
@@ -7492,7 +7515,7 @@ Transform:
   m_GameObject: {fileID: 1360314566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.47, y: 2, z: 3.13}
+  m_LocalPosition: {x: 2.08, y: 2, z: 4.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8177,7 +8200,9 @@ MonoBehaviour:
             m_InteractionMode:
               rid: 6941061497713852500
         m_Speed: 4
-        m_Rotation: 1800
+        m_Rotation:
+          m_IsEnabled: 1
+          m_Value: 1800
         m_Mass: 80
         m_Height: 2
         m_Radius: 0.2
@@ -11703,7 +11728,9 @@ MonoBehaviour:
             m_InteractionMode:
               rid: 6302707468022317102
         m_Speed: 4
-        m_Rotation: 1800
+        m_Rotation:
+          m_IsEnabled: 1
+          m_Value: 1800
         m_Mass: 80
         m_Height: 2
         m_Radius: 0.2

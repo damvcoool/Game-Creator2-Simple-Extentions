@@ -1,6 +1,7 @@
 using UnityEngine;
 namespace SimpleExtentions.Runtime.Common
 {
+    [AddComponentMenu("Game Creator/Simple Extensions/Billboard")]
     public class Billboard : MonoBehaviour
     {
         private Camera m_Camera;

@@ -10,7 +10,7 @@ namespace SimpleExtentions.Runtime.Pause
     [Version(1, 0, 0)]
 
     [Title("Pause UI")]
-    [Description("Opens a trading window for a specific Merchant")]
+    [Description("Opens specified PauseUI")]
 
     [Category("UI/Pause UI")]
 
