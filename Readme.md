@@ -11,19 +11,21 @@ A few of the extensions are:
 
 Things I will not include:
 - Instructions uploaded to the Hub
-- Game Creator 2 Core code, or code in the modules
+- Game Creator 2 Core code, or code in the official modules
 
 ## Requirements
-To take advantage of the code and samples on this repository you will need the following:
-- Unity 2022.1
+To take advantage of Simple Extensions for Game Creator 2 you will need the following:
+- Unity 2022.3 LTS
 - [Game Creator 2](https://assetstore.unity.com/packages/tools/game-toolkits/game-creator-2-203069)
-- Input System
-- Burst
-- Blockout from Game Creator 2
+- Input System (Required by GC2)
+
+To be able to use the sample demos, you will need the following:
+- Blockout package from Game Creator 2
 
 ### Additional Requirements
 Some of the examples will also require some custom Actions, Conditions and Triggers that can be downloaded from the [Game Creator Hub](https://gamecreator.io/hub)
 I will try to list the ones I use here as I come up with them.
+- [Cycle Graphical Quality](https://gamecreator.io/hub/BRQO5fuWZYebZS3un19q)
 
 ## Custom Micro Modules
 
@@ -34,8 +36,8 @@ With this Micro Module, it can be easier to implement a Pause Screen for your ga
 
 [Explanation Video](https://youtu.be/_E91aJAcsC8)
 
-### PauseUI MicroModule
-With this Micro Module, it can be easier to implement a very basic Popup for NPC's to say stuff.
+### Simple Dialogue MicroModule
+With this Micro Module, it can be easier to implement a very basic dialogue looking stuff.
 
 Download Package...(coming up)
 
