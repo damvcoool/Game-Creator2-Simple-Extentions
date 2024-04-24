@@ -29,10 +29,8 @@ I will try to list the ones I use here as I come up with them.
 
 ## Custom Micro Modules
 
-### PauseUI MicroModule
+### Simple Pause MicroModule
 With this Micro Module, it can be easier to implement a Pause Screen for your game.
-
-[Download PauseUI MicroModule](https://github.com/damvcoool/GameCreator2Samples/blob/main/UnityPackages/PauseUI_MicroModule-v0.1.5.unitypackage?raw=true)
 
 [Explanation Video](https://youtu.be/_E91aJAcsC8)
 
@@ -43,11 +41,11 @@ Download Package...(coming up)
 
 Explanation Video (Comming up...)
 
+NOTE: it's not meant to be full featured, for a full featured Dialogue module I suggest to get Dialogue 2 module for Game Creator 2.
+
 ### Simple Melee MicroModule (Broken for now)
 With this Module it should be a bit easier to implement some basic Melee for your game.
 
-[Download Simple Melee MicroModule](https://github.com/damvcoool/GameCreator2Samples/tree/main/UnityPackages/SimpleMelee_MicroModule-v0.0.8.unitypackage?raw=true)
-
 Explanation Video (Comming up...)
 
-NOTE: it's not meant to be full featured.
+NOTE: it's not meant to be full featured, for a full featured Melee module I suggest to get Melee 2 module for Game Creator 2.
