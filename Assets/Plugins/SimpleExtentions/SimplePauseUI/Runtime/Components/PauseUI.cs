@@ -54,7 +54,6 @@ namespace SimpleExtentions.Runtime.Pause
 
         private void OnDisable()
         {
-            if (m_Args == null) return;
             float time = (float)m_ResumeTime.Get(m_Args);
             float transition = (float)m_TransitionDuration.Get(m_Args);
             int layer = this.Layer = (int)m_Layer.Get(m_Args);
