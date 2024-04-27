@@ -1,16 +1,14 @@
 using System;
 using GameCreator.Runtime.Common;
 using GameCreator.Runtime.Characters;
-using UnityEngine.Playables;
-using System.Threading.Tasks;
 using UnityEngine;
 using SimpleExtentions.Runtime.Common;
 
 namespace SimpleExtentions.Runtime.SimpleMelee
 {
     [CreateAssetMenu(
-        fileName = "Simple Weapon",
-        menuName = "Game Creator/Simple Melee/Simple Weapon"
+        fileName = "Simple Melee Weapon",
+        menuName = "Game Creator/Simple Extensions/Simple Melee Weapon"
     )]
 
     [Icon(Paths.PATH + "SimpleMelee/Editor/SwordGizmo.png")]

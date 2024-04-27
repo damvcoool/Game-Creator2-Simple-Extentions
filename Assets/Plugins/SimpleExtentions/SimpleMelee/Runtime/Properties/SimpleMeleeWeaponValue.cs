@@ -7,7 +7,7 @@ namespace SimpleExtentions.Runtime.SimpleMelee
 {
     [Image(typeof(IconWheel), ColorTheme.Type.Green)]
     [Title("Simple Weapon")]
-    [Category("Simple Melee/Simple Weapon")]
+    [Category("Simple Extensions/Simple Weapon")]
 
     [Serializable]
     public class SimpleMeleeWeaponValue : TValue
@@ -73,7 +73,6 @@ namespace SimpleExtentions.Runtime.SimpleMelee
         );
 
 #endif
-
         private static SimpleMeleeWeaponValue CreateValue(object value)
         {
             return new SimpleMeleeWeaponValue(value as SimpleMeleeWeapon);

@@ -30,8 +30,6 @@ namespace SimpleExtentions.Runtime.SimpleMelee
         public override string Title => string.Format("Change {0} Weapon for {1}", this.m_Character, m_MeleeWeapon ? m_MeleeWeapon.name : "Unequip");
         protected override Task Run(Args args)
         {
-            //if (m_MeleeWeapon == null) return DefaultResult;
-
             SimpleMeleeCharacter characterMelee = m_Character.Get(args).GetComponent<SimpleMeleeCharacter>();
             if (characterMelee == null) return DefaultResult;
 
@@ -41,8 +39,6 @@ namespace SimpleExtentions.Runtime.SimpleMelee
                 characterMelee.m_Weapon = m_MeleeWeapon;
                 characterMelee.Equip();
             }
-            Debug.Log(m_MeleeWeapon);
-
             return DefaultResult;
         }
     }

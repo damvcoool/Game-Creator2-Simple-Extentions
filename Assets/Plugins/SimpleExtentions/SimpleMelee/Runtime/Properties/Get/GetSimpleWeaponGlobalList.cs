@@ -18,8 +18,6 @@ namespace SimpleExtentions.Runtime.SimpleMelee
         protected FieldGetGlobalList m_Variable = new FieldGetGlobalList(SimpleMeleeWeaponValue.TYPE_ID);
 
         public override SimpleMeleeWeapon Get(Args args) => this.m_Variable.Get<SimpleMeleeWeapon>(args);
-        //public override SimpleMeleeWeapon Get(GameObject gameObject) => this.m_Variable.Get<SimpleMeleeWeapon>();
-
         public override string String => this.m_Variable.ToString();
     }
 }

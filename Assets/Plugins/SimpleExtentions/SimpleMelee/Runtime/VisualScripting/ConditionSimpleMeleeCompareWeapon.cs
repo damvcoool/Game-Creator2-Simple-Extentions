@@ -31,11 +31,15 @@ namespace SimpleExtentions.Runtime.SimpleMelee
         protected override bool Run(Args args)
         {
             SimpleMeleeCharacter characterMelee = m_Character.Get(args).GetComponent<SimpleMeleeCharacter>();
-            
+
             if (characterMelee.m_Weapon == m_MeleeWeapon)
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }
         }
     }
 }

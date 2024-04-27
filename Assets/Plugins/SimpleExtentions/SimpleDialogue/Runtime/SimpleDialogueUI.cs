@@ -13,7 +13,7 @@ using UnityEditor;
 #endif
 namespace SimpleExtentions.Runtime.SimpleDialogue
 {
-    [AddComponentMenu("Game Creator/UI/Simple Dialogue UI")]
+    [AddComponentMenu("Game Creator/Simple Extensions/Simple Dialogue UI")]
     [Icon(Paths.PATH + "SimpleDialogue/Editor/GizmoSimpleDialogue.png")]
     public class SimpleDialogueUI : MonoBehaviour
     {

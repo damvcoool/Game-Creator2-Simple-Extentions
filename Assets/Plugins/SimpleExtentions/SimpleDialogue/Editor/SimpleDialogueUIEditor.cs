@@ -1,5 +1,4 @@
 using GameCreator.Editor.Common.UnityUI;
-using GameCreator.Editor.Common;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -7,7 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using SimpleExtentions.Runtime.SimpleDialogue;
 using TMPro;
-using Image = UnityEngine.UI.Image;
 
 namespace SimpleExtentions.Editor.SimpleDialogue
 {
@@ -51,18 +49,18 @@ namespace SimpleExtentions.Editor.SimpleDialogue
             this.m_Body.Add(fieldText);
             this.m_Body.Add(fieldSpeaker);
             this.m_Body.Add(fieldUseBillboard);
-                        
+
             return this.m_Root;
         }
         // CREATION MENU: -------------------------------------------------------------------------
 
-        [MenuItem("GameObject/Game Creator/UI/Simple Dialogue UI (TMP)", false, 0)]
+        [MenuItem("GameObject/Game Creator/Simple Extensions/Simple Dialogue UI (TMP)", false, 0)]
         public static void CreateElementTMP(MenuCommand menuCommand)
         {
             TMP_DefaultControls.Resources TMPResources = new TMP_DefaultControls.Resources();
 
             GameObject canvas = UnityUIUtilities.GetCanvas();
-            GameObject simpleDialogueUI = new GameObject("Simple Dialogue UI",typeof(RectTransform));
+            GameObject simpleDialogueUI = new GameObject("Simple Dialogue UI", typeof(RectTransform));
 
             simpleDialogueUI.transform.SetParent(canvas.transform, false);
 
@@ -72,7 +70,7 @@ namespace SimpleExtentions.Editor.SimpleDialogue
             Container.transform.SetParent(simpleDialogueUI.transform, false);
             Container.name = "Container";
 
-            
+
             GameObject Text = TMP_DefaultControls.CreateText(TMPResources);
             Text.transform.SetParent(Container.transform, false);
             Text.name = "Text";
@@ -87,7 +85,7 @@ namespace SimpleExtentions.Editor.SimpleDialogue
             Selection.activeGameObject = simpleDialogueUI;
         }
 
-        [MenuItem("GameObject/Game Creator/UI/Simple Dialogue UI", false, 0)]
+        [MenuItem("GameObject/Game Creator/Simple Extensions/Simple Dialogue UI (Legacy)", false, 0)]
         public static void CreateElement(MenuCommand menuCommand)
         {
             GameObject canvas = UnityUIUtilities.GetCanvas();

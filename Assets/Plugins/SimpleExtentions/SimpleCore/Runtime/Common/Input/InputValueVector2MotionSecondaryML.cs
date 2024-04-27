@@ -8,7 +8,7 @@ namespace SimpleExtentions.Runtime.Common
     [Title("Secondary Motion With Options")]
     [Category("Usage/Secondary Motion With Options")]
 
-    [Version(0, 1, 0    )]
+    [Version(1, 0, 5)]
 
     [Description("Secondary motion commonly used to orbit the camera around the main character: Move the Mouse while pressing a key (or not) and Left Stick on Gamepads")]
     [Image(typeof(IconRotation), ColorTheme.Type.Blue)]

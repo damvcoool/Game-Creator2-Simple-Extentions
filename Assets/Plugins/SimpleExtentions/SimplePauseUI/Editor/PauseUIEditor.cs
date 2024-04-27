@@ -37,20 +37,20 @@ namespace SimpleExtentions.Editor.Pause
         }
         // CREATION MENU: -------------------------------------------------------------------------
 
-        [MenuItem("GameObject/Game Creator/UI/Pause UI", false, 0)]
+        [MenuItem("GameObject/Game Creator/Simple Extensions/Simple Pause UI", false, 0)]
         public static void CreateElement(MenuCommand menuCommand)
         {
-            GameObject canvas = UnityUIUtilities.GetCanvas();
+            GameObject canvasObj = new GameObject("PauseCanvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster), typeof(PauseUI));
+            Canvas canvas = canvasObj.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
 
             DefaultControls.Resources resources = UnityUIUtilities.GetStandardResources();
             GameObject gameObject = DefaultControls.CreateImage(resources);
-            gameObject.transform.SetParent(canvas.transform, false);
+            gameObject.transform.SetParent(canvasObj.transform, false);
             gameObject.name = "Pause UI";
 
-            gameObject.AddComponent<PauseUI>();
-
             Undo.RegisterCreatedObjectUndo(gameObject, $"Create {gameObject.name}");
-            Selection.activeGameObject = gameObject;
+            Selection.activeGameObject = canvasObj;
         }
     }
 }

@@ -5,7 +5,7 @@ using SimpleExtentions.Runtime.Common;
 
 namespace SimpleExtentions.Runtime.SimpleMelee
 {
-    [AddComponentMenu("Game Creator/Custom/Simple Character Melee")]
+    [AddComponentMenu("Game Creator/Simple Extensions/Simple Character Melee")]
 
     [Icon(Paths.PATH + "SimpleMelee/Editor/MeleeGizmo.png")]
 
@@ -44,13 +44,13 @@ namespace SimpleExtentions.Runtime.SimpleMelee
             p_Weapon.GetComponent<Rigidbody>().isKinematic = false;
             p_Weapon.GetComponent<Collider>().enabled = true;
             p_Weapon.GetComponent<Collider>().isTrigger = false;
-            m_Character.Props.DropPrefab(m_Weapon.WeaponPrefab);//RemovePrefab(m_Weapon.WeaponPrefab);
+            m_Character.Props.RemoveAtBone(m_Weapon.Bone);
+
             m_Weapon = null;
         }
         public bool HasWeapon()
         {
             if(this.m_Weapon == null) return false;
-            Debug.Log("Has Weapon");
             return true;
         }
 
