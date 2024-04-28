@@ -8,7 +8,7 @@ namespace SimpleExtentions.Runtime.Common
 {
     [Title("Show Tooltip Image")]
     [Image(typeof(IconString), ColorTheme.Type.Blue)]
-    
+
     [Category("UI/Show Tooltip Image")]
     [Description(
         "Displays a text in a world-space canvas when the Hotspot is enabled and hides it " +
@@ -29,21 +29,23 @@ namespace SimpleExtentions.Runtime.Common
         private static readonly Color COLOR_BACKGROUND = new Color(0f, 0f, 0f, 0.5f);
 
         // EXPOSED MEMBERS: -----------------------------------------------------------------------
-        
+
         [SerializeField] protected PropertyGetSprite m_Image = GetSpriteInstance.Create();
         [SerializeField] protected Vector3 m_Offset = Vector3.zero;
         [SerializeField] protected Space m_Space = Space.Self;
-        
-        [Space] [SerializeField] protected GameObject m_Prefab;
+
+        [Space][SerializeField] protected GameObject m_Prefab;
 
         // MEMBERS: -------------------------------------------------------------------------------
-        
+
         [NonSerialized] private GameObject m_Tooltip;
         [NonSerialized] private ImageToolTip m_TooltipImage;
-        
+
         // PROPERTIES: ----------------------------------------------------------------------------
 
-        public override string Title => $"Show {this.m_Image.EditorValue.name}";
+        public override string Title => String.Format("Show {0}",
+            this.m_Image?.EditorValue != null ? this.m_Image?.EditorValue : "(none)"
+            );
 
         // OVERRIDE METHODS: ----------------------------------------------------------------------
 
@@ -60,7 +62,7 @@ namespace SimpleExtentions.Runtime.Common
                 Space.Self => hotspot.transform.TransformDirection(this.m_Offset),
                 _ => throw new ArgumentOutOfRangeException()
             };
-            
+
             instance.transform.SetPositionAndRotation(
                 hotspot.transform.position + offset,
                 ShortcutMainCamera.Transform.rotation
@@ -84,7 +86,7 @@ namespace SimpleExtentions.Runtime.Common
                 UnityEngine.Object.Destroy(this.m_Tooltip);
             }
         }
-        
+
         // VIRTUAL METHODS: -----------------------------------------------------------------------
 
         protected virtual bool EnableInstance(Hotspot hotspot)
@@ -116,10 +118,10 @@ namespace SimpleExtentions.Runtime.Common
                         hotspot.transform.position + hotspot.transform.TransformDirection(this.m_Offset),
                         ShortcutMainCamera.Transform.rotation
                     );
-                    
+
                     Canvas canvas = this.m_Tooltip.AddComponent<Canvas>();
                     this.m_Tooltip.AddComponent<CanvasScaler>();
-                    
+
                     canvas.renderMode = RenderMode.WorldSpace;
                     canvas.worldCamera = ShortcutMainCamera.Get<Camera>();
 
@@ -136,7 +138,7 @@ namespace SimpleExtentions.Runtime.Common
                 }
 
                 this.m_Tooltip.hideFlags = HideFlags.HideAndDontSave;
-                
+
                 Args args = new Args(hotspot.gameObject, hotspot.Target);
                 this.m_TooltipImage.sprite = this.m_Image.Get(args);
             }
@@ -147,7 +149,7 @@ namespace SimpleExtentions.Runtime.Common
         private RectTransform ConfigureBackground(RectTransform parent)
         {
             GameObject gameObject = new GameObject("Background");
-            
+
             Image image = gameObject.AddComponent<Image>();
             image.color = COLOR_BACKGROUND;
 
@@ -164,13 +166,13 @@ namespace SimpleExtentions.Runtime.Common
             ContentSizeFitter sizeFitter = gameObject.AddComponent<ContentSizeFitter>();
             sizeFitter.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
             sizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
-            
+
             RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
             RectTransformUtils.SetAndCenterToParent(rectTransform, parent);
 
             return rectTransform;
         }
-        
+
         private GameObject ConfigureImage(RectTransform parent)
         {
             GameObject gameObject = new GameObject("Image");
@@ -178,7 +180,7 @@ namespace SimpleExtentions.Runtime.Common
 
             RectTransform imageTransform = gameObject.GetComponent<RectTransform>();
             RectTransformUtils.SetAndCenterToParent(imageTransform, parent);
-            
+
             return gameObject;
         }
     }
