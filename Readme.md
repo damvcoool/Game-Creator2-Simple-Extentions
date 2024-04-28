@@ -29,6 +29,11 @@ I will try to list the ones I use here as I come up with them.
 
 ## Custom Micro Modules
 
+### Simple Extensions Core
+This is the base for allt he other MicroModules in this repository, it does come with some features of it's own.
+
+[Explanation Video](https://youtu.be/e5hsQKQFwBA)
+
 ### Simple Pause MicroModule
 With this Micro Module, it can be easier to implement a Pause Screen for your game.
 
