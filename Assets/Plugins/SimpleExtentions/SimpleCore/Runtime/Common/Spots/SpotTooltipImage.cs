@@ -43,7 +43,7 @@ namespace SimpleExtentions.Runtime.Common
         
         // PROPERTIES: ----------------------------------------------------------------------------
 
-        public override string Title => $"Show " + this.m_Image;
+        public override string Title => $"Show {this.m_Image.EditorValue.name}";
 
         // OVERRIDE METHODS: ----------------------------------------------------------------------
 
