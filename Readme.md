@@ -32,12 +32,12 @@ I will try to list the ones I use here as I come up with them.
 ### Simple Extensions Core
 This is the base for allt he other MicroModules in this repository, it does come with some features of it's own.
 
-[Explanation Video](https://youtu.be/e5hsQKQFwBA)
+[Simple Extensions - Explanation Video](https://youtu.be/e5hsQKQFwBA)
 
 ### Simple Pause MicroModule
 With this Micro Module, it can be easier to implement a Pause Screen for your game.
 
-[Explanation Video](https://youtu.be/_E91aJAcsC8)
+[Simple Melee - Explanation Video](https://youtu.be/_E91aJAcsC8)
 
 ### Simple Dialogue MicroModule
 With this Micro Module, it can be easier to implement a very basic dialogue looking stuff.
