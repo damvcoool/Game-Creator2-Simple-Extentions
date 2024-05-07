@@ -36,7 +36,7 @@ This is the base for allt he other MicroModules in this repository, it does come
 
 ### Simple Pause MicroModule
 With this Micro Module, it can be easier to implement a Pause Screen for your game.
-https://www.youtube.com/watch?v=hJvmDrvHcGc
+
 [Simple Pause - Explanation Video](https://youtu.be/hJvmDrvHcGc)
 
 ### Simple Dialogue MicroModule
