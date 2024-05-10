@@ -51,6 +51,6 @@ NOTE: it's not meant to be full featured, for a full featured Dialogue module I 
 ### Simple Melee MicroModule (Broken for now)
 With this Module it should be a bit easier to implement some basic Melee for your game.
 
-[Simple Pause - Explanation Video](https://youtu.be/azZ8kYV1wYU)
+[Simple Melee - Explanation Video](https://youtu.be/azZ8kYV1wYU)
 
 NOTE: it's not meant to be full featured, for a full featured Melee module I suggest to get Melee 2 module for Game Creator 2.
