@@ -11542,6 +11542,9 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 737307549025173661
+      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
     - rid: 6227347475553583607
       type: {class: EventOnHotspotActivate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -11558,11 +11561,8 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_Character:
           m_Property:
-            rid: 6227347475553583640
+            rid: 737307549025173661
         m_SimpleDialogue: {fileID: 2579265732079580941, guid: 947e464b66683ce488c9a4498feee0be, type: 3}
-    - rid: 6227347475553583640
-      type: {class: GetGameObjectSelf, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
 --- !u!114 &2099382788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11577,7 +11577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Target:
     m_Property:
-      rid: 6302707468022317141
+      rid: 737307549025173664
   m_Mode: 0
   m_Radius:
     m_Property:
@@ -11587,7 +11587,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 6302707468022317141
+    - rid: 737307549025173664
       type: {class: GetGameObjectPlayer, ns: GameCreator.Runtime.Characters, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 6302707468022317142

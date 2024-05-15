@@ -68,7 +68,7 @@ namespace SimpleExtentions.Runtime.SimpleMelee
 
             await gestureTask;
             p_IsAttacking = false;
-            collider.enabled = false;
+            if(collider != null) collider.enabled = false;
         }
 
     }

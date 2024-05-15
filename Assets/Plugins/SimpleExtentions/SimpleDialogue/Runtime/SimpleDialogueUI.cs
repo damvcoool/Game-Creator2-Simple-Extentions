@@ -83,7 +83,6 @@ namespace SimpleExtentions.Runtime.SimpleDialogue
             if(m_CurrentSpeaker != null)
                 m_CurrentSpeaker.Text = currentSpeaker;
 
-
             m_Text.Text = m_DialogueText.Get(m_Args)[0].ToString();
             OnContinue();
         }
@@ -121,7 +120,6 @@ namespace SimpleExtentions.Runtime.SimpleDialogue
         }
         private async void OnContinue()
         {
-            if(m_Args == null) return;
             float duration = (float)m_IntervalTime.Get(m_Args);
 
             for (int i = 0; i < m_DialogueText.Get(m_Args).Count; i++)
@@ -129,7 +127,7 @@ namespace SimpleExtentions.Runtime.SimpleDialogue
                 m_Text.Text = m_DialogueText.Get(m_Args)[i].ToString();
                 await this.Time(duration, m_UpdateTime);
             }
-            
+
             EndDialogue();
         }
         private async Task Yield()

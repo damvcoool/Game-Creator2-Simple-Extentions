@@ -19,14 +19,11 @@ MonoBehaviour:
   m_AvatarMask: {fileID: 31900000, guid: 11671dd559385084a961a29879486476, type: 2}
   m_UseRootMotion: 0
   m_Bone:
-    m_IsExpanded: 1
-    m_Breakpoint: 0
-    m_IsEnabled: 1
     m_Type: 1
     m_Human: 18
     m_Path: 
-  m_Position: {x: 0, y: 0, z: 0}
-  m_Rotation: {x: 0, y: 0, z: 0}
+  m_Position: {x: -0.01, y: 0.096, z: 0.015}
+  m_Rotation: {x: 0, y: 0, z: 96.02}
   references:
     version: 2
     RefIds:

@@ -3052,7 +3052,7 @@ MonoBehaviour:
     - m_String: mp
     - m_String: stamina
     m_Values:
-    - m_IsExpanded: 0
+    - m_IsExpanded: 1
       m_ChangeStartPercent:
         m_IsEnabled: 0
         m_Value: 1
@@ -3084,7 +3084,7 @@ MonoBehaviour:
       m_ChangeBase:
         m_IsEnabled: 0
         m_Value: 1
-    - m_IsExpanded: 0
+    - m_IsExpanded: 1
       m_ChangeBase:
         m_IsEnabled: 0
         m_Value: 1
