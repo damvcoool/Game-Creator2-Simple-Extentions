@@ -23,8 +23,6 @@ namespace SimpleExtentions.Runtime.Pause
     [Serializable]
     public class InstructionPauseUI : Instruction
     {
-        public override string Title => $"{this.m_State} Pause UI";
-
         public enum EnumState
         {
             Open,
@@ -35,19 +33,24 @@ namespace SimpleExtentions.Runtime.Pause
         [SerializeField] private EnumState m_State = EnumState.Open;
         private PauseUI pauseUI;
 
+        public override string Title => $"{this.m_State} {this.m_PauseUI}";
         protected override Task Run(Args args)
         {
             pauseUI = m_PauseUI.Get(args).Get<PauseUI>();
 
+            if (pauseUI == null) 
+            { 
+                Debug.LogWarning($"Pause UI has not been specified"); 
+                return DefaultResult; 
+            }
+
             if (m_State == EnumState.Open)
             {
-                if (pauseUI == null) { Debug.Log($"Pause UI has not been specified"); return DefaultResult; }
-                pauseUI.OpenUI(m_PauseUI.Get(args).gameObject);
+                pauseUI.OpenUI(m_PauseUI.Get(args));
             }
             if (m_State == EnumState.Close)
             {
-                PauseUI m_ClosingUI = GameObject.FindObjectOfType<PauseUI>();
-                if (m_ClosingUI != null) m_ClosingUI.gameObject.SetActive(false);
+                pauseUI.CloseUI(m_PauseUI.Get(args));
             }
             return DefaultResult;
         }

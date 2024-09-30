@@ -2,6 +2,10 @@ using System;
 using UnityEngine;
 using GameCreator.Runtime.Common;
 using SimpleExtentions.Runtime.Common;
+using GameCreator.Runtime.Inventory.UnityUI;
+using UnityEngine.InputSystem.LowLevel;
+using System.Collections.Generic;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -38,8 +42,8 @@ namespace SimpleExtentions.Runtime.Pause
 
         // EVENTS. --------------------------------------------------------------------------------
 
-        public static event Action EventOpen;
-        public static event Action EventClose;
+        public static event Action<GameObject> EventOpen;
+        public static event Action<GameObject> EventClose;
         // INITIALIZERS: --------------------------------------------------------------------------
 
         private void OnEnable()
@@ -49,7 +53,7 @@ namespace SimpleExtentions.Runtime.Pause
             int layer = this.Layer = (int)m_Layer.Get(m_Args);
             IsOpen = true;
             this.OnPause(time, transition, layer);
-            EventOpen?.Invoke();
+            EventOpen?.Invoke(this.gameObject);
         }
 
         private void OnDisable()
@@ -59,32 +63,51 @@ namespace SimpleExtentions.Runtime.Pause
             int layer = this.Layer = (int)m_Layer.Get(m_Args);
             IsOpen = false;
             this.OnResume(time, transition, layer);
-            EventClose?.Invoke();
+            EventClose?.Invoke(this.gameObject);
         }
 
 
         // PUBLIC METHODS: ------------------------------------------------------------------------
         public void OpenUI(GameObject pause)
         {
-            //if (pause == null) return;
+            if (pause == null) return;
 
             this.PausePrefab = pause;
-            if (!FindObjectOfType<PauseUI>(true))
+
+            PauseUI obj = null;
+
+            PauseUI[] objList = FindObjectsByType<PauseUI>(FindObjectsInactive.Include, FindObjectsSortMode.InstanceID);
+
+            foreach (PauseUI pauseUI in objList)
             {
-                Instantiate(PausePrefab, new Vector3(Screen.width, Screen.height, 0), Quaternion.identity);
+                if (pause.name == pauseUI.PausePrefab.name)
+                {
+                    obj = pauseUI;
+                }
+            }
+
+            if (obj == null)
+            {
+                GameObject go = Instantiate(PausePrefab, new Vector3(Screen.width, Screen.height, 0), Quaternion.identity);
+                go.GetComponent<PauseUI>().PausePrefab = pause;
             }
             else
             {
-                FindObjectOfType<PauseUI>(true).gameObject.SetActive(true);
+                obj.gameObject.SetActive(true);
             }
-
             return;
         }
-        public void CloseUI()
+        public void CloseUI(GameObject pause)
         {
-            if (FindObjectOfType<PauseUI>())
+            string name = pause.GetComponent<PauseUI>().PausePrefab.name;
+            PauseUI[] objList = FindObjectsByType<PauseUI>(FindObjectsInactive.Include, FindObjectsSortMode.InstanceID);
+
+            foreach (PauseUI pauseUI in objList)
             {
-                GameObject.FindObjectOfType<PauseUI>().gameObject.SetActive(false);
+                if (name == pauseUI.PausePrefab.name)
+                {
+                    pauseUI.gameObject.SetActive(false);
+                }
             }
             return;
         }
