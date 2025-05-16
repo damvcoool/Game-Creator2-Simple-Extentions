@@ -552,6 +552,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 5658876647192396439
       type: {class: InstructionCycleQualityLevel, ns: , asm: Assembly-CSharp-firstpass}
       data:
@@ -567,15 +569,6 @@ MonoBehaviour:
         m_QualityName:
           m_Property:
             rid: 5658876647192396442
-    - rid: 5658876647192396440
-      type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5658876647192396441
-      type: {class: SetNumberNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5658876647192396442
-      type: {class: SetStringNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
 --- !u!1 &1511560660524887518
 GameObject:
   m_ObjectHideFlags: 0
@@ -5731,6 +5724,16 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 2267348371174064728
+      type: {class: GetGameObjectGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: game-object
+          m_Variable: {fileID: 11400000, guid: 7e8cefc5be22bc44ba914e9f75830fe6, type: 2}
+          m_Name:
+            m_String: PauseUI
+            m_ID: -1283861739
     - rid: 5658876646923174470
       type: {class: InstructionCommonAudioUIPlay, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data:
@@ -5763,11 +5766,8 @@ MonoBehaviour:
         m_IsEnabled: 1
         m_PauseUI:
           m_Property:
-            rid: 6302707498019979346
+            rid: 2267348371174064728
         m_State: 1
-    - rid: 6302707498019979346
-      type: {class: GetGameObjectNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
 --- !u!114 &7345045195553509314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6722,6 +6722,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 5658876647192396321
       type: {class: InstructionCycleQualityLevel, ns: , asm: Assembly-CSharp-firstpass}
       data:
@@ -6737,15 +6739,6 @@ MonoBehaviour:
         m_QualityName:
           m_Property:
             rid: 5658876647192396324
-    - rid: 5658876647192396322
-      type: {class: GetBoolTrue, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5658876647192396323
-      type: {class: SetNumberNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 5658876647192396324
-      type: {class: SetStringNone, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
 --- !u!1 &9090234930590823721
 GameObject:
   m_ObjectHideFlags: 0

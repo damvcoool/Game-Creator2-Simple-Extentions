@@ -2,9 +2,6 @@ using System;
 using UnityEngine;
 using GameCreator.Runtime.Common;
 using SimpleExtentions.Runtime.Common;
-//using GameCreator.Runtime.Inventory.UnityUI;
-using UnityEngine.InputSystem.LowLevel;
-using System.Collections.Generic;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -120,7 +117,10 @@ namespace SimpleExtentions.Runtime.Pause
 
         private void OnResume(float timescale, float transition, int layer)
         {
-            TimeManager.Instance.SetSmoothTimeScale(timescale, transition, layer);
+            if (TimeManager.Instance != null)
+            {
+                TimeManager.Instance.SetSmoothTimeScale(timescale, transition, layer);
+            }
         }
     }
 }
