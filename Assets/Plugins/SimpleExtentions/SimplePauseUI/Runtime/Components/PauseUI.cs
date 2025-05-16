@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using GameCreator.Runtime.Common;
 using SimpleExtentions.Runtime.Common;
-using GameCreator.Runtime.Inventory.UnityUI;
+//using GameCreator.Runtime.Inventory.UnityUI;
 using UnityEngine.InputSystem.LowLevel;
 using System.Collections.Generic;
 
