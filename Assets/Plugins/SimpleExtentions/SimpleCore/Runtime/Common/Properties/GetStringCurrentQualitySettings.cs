@@ -8,7 +8,7 @@ namespace SimpleExtentions.Runtime.Common
     [Category("Settings/Current Graphical Quality")]
 
     [Image(typeof(IconUnity), ColorTheme.Type.White)]
-    [Description("Returns the current Grpahical Quality Setting Name")]
+    [Description("Returns the current Graphical Quality Setting Name")]
 
     [Serializable]
     public class GetStringCurrentQualitySettings : PropertyTypeGetString

@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using GameCreator.Runtime.Common;
-using UnityEngine.UI;
 using GameCreator.Runtime.VisualScripting;
 
 namespace SimpleExtentions.Runtime.Pause
@@ -31,26 +30,31 @@ namespace SimpleExtentions.Runtime.Pause
 
         [SerializeField] private PropertyGetGameObject m_PauseUI;
         [SerializeField] private EnumState m_State = EnumState.Open;
-        private PauseUI pauseUI;
 
         public override string Title => $"{this.m_State} {this.m_PauseUI}";
         protected override Task Run(Args args)
         {
-            pauseUI = m_PauseUI.Get(args).Get<PauseUI>();
+            GameObject pauseGO = m_PauseUI.Get(args);
+            if (pauseGO == null)
+            {
+                Debug.LogWarning("Pause UI has not been specified");
+                return DefaultResult;
+            }
 
-            if (pauseUI == null) 
-            { 
-                Debug.LogWarning($"Pause UI has not been specified"); 
-                return DefaultResult; 
+            PauseUI pauseUI = pauseGO.GetComponent<PauseUI>();
+            if (pauseUI == null)
+            {
+                Debug.LogWarning("Pause UI component not found on the specified object");
+                return DefaultResult;
             }
 
             if (m_State == EnumState.Open)
             {
-                pauseUI.OpenUI(m_PauseUI.Get(args));
+                pauseUI.OpenUI(pauseGO);
             }
-            if (m_State == EnumState.Close)
+            else if (m_State == EnumState.Close)
             {
-                pauseUI.CloseUI(m_PauseUI.Get(args));
+                pauseUI.CloseUI(pauseGO);
             }
             return DefaultResult;
         }

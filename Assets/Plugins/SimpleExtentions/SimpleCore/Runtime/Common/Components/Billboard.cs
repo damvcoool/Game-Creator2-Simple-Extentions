@@ -13,8 +13,13 @@ namespace SimpleExtentions.Runtime.Common
 
         void Update()
         {
+            if (m_Camera == null)
+            {
+                m_Camera = Camera.main;
+                if (m_Camera == null) return;
+            }
             transform.LookAt(m_Camera.transform);
-            transform.rotation = Quaternion.Euler(0f,transform.rotation.eulerAngles.y + 180f,0f);
+            transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y + 180f, 0f);
         }
     }
 }

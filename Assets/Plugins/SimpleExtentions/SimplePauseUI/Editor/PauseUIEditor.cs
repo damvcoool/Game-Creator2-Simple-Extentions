@@ -23,8 +23,8 @@ namespace SimpleExtentions.Editor.Pause
             SerializedProperty transitionDuration = this.serializedObject.FindProperty("m_TransitionDuration");
             SerializedProperty layer = this.serializedObject.FindProperty("m_Layer");
 
-            PropertyField fieldResumeTime = new PropertyField(pauseTime);
-            PropertyField fieldPauseTime = new PropertyField(resumeTime);
+            PropertyField fieldPauseTime = new PropertyField(pauseTime);
+            PropertyField fieldResumeTime = new PropertyField(resumeTime);
             PropertyField fieldTransitionDuration = new PropertyField(transitionDuration);
             PropertyField fieldLayer = new PropertyField(layer);
 
