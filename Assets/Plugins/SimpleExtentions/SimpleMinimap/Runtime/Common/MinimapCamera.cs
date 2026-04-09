@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using GameCreator.Runtime.Common;
+using GameCreator.Runtime.Characters;
 
 namespace SimpleExtentions.Runtime.Minimap
 {

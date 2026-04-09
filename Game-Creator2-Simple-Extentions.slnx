@@ -1,0 +1,27 @@
+﻿<Solution>
+  <Project Path="GameCreator.Runtime.Dialogue.csproj" />
+  <Project Path="GameCreator.Runtime.Inventory.csproj" />
+  <Project Path="GameCreator.Runtime.Core.csproj" />
+  <Project Path="GameCreator.Runtime.Stats.csproj" />
+  <Project Path="GameCreator.Editor.Core.csproj" />
+  <Project Path="Assembly-CSharp-firstpass.csproj" />
+  <Project Path="GameCreator.Editor.Stats.csproj" />
+  <Project Path="GameCreator.Editor.Inventory.csproj" />
+  <Project Path="GameCreator.Runtime.Quests.csproj" />
+  <Project Path="GameCreator.Editor.Behavior.csproj" />
+  <Project Path="GameCreator.Runtime.Perception.csproj" />
+  <Project Path="GameCreator.Runtime.Melee.csproj" />
+  <Project Path="GameCreator.Editor.Shooter.csproj" />
+  <Project Path="GameCreator.Runtime.Behavior.csproj" />
+  <Project Path="GameCreator.Runtime.Shooter.csproj" />
+  <Project Path="GameCreator.Editor.Quests.csproj" />
+  <Project Path="GameCreator.Editor.Melee.csproj" />
+  <Project Path="GameCreator.Tests.Core.csproj" />
+  <Project Path="GameCreator.Editor.Perception.csproj" />
+  <Project Path="GameCreator.Editor.Dialogue.csproj" />
+  <Project Path="GameCreator.Runtime.Alias.csproj" />
+  <Project Path="GameCreator.Editor.Transitions.csproj" />
+  <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
+  <Project Path="GameCreator.Runtime.Transitions.csproj" />
+  <Project Path="GameCreator.Editor.Alias.csproj" />
+</Solution>

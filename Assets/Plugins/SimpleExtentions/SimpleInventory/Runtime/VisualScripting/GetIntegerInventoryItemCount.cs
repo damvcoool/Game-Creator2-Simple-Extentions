@@ -13,7 +13,7 @@ namespace SimpleExtentions.Runtime.Inventory
     [Keywords("Inventory", "Item", "Count", "Amount")]
 
     [Serializable]
-    public class GetIntegerInventoryItemCount : PropertyTypeGetInteger
+    public class GetIntegerInventoryItemCount : PropertyTypeGetDecimal
     {
         // EXPOSED MEMBERS: -----------------------------------------------------------------------
 
@@ -27,14 +27,14 @@ namespace SimpleExtentions.Runtime.Inventory
 
         // PUBLIC METHODS: ------------------------------------------------------------------------
 
-        public override long Get(Args args)
+        public override double Get(Args args)
         {
             Inventory inventory = m_Inventory.Get<Inventory>(args);
             if (inventory == null || m_Item == null) return 0;
             return inventory.GetCount(m_Item);
         }
 
-        public override long Get(GameObject gameObject)
+        public override double Get(GameObject gameObject)
         {
             Inventory inventory = gameObject.GetComponent<Inventory>();
             if (inventory == null || m_Item == null) return 0;

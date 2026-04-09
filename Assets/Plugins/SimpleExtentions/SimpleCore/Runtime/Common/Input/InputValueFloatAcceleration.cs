@@ -41,6 +41,8 @@ namespace SimpleExtentions.Runtime.Common
             }
         }
 
+        public override bool IsDeltaControl => false;
+
         //public override bool Active
         //{
         //    get => this.InputAction?.enabled ?? false;
